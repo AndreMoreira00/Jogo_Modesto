@@ -70,5 +70,5 @@ func _on_animation_jump_finished():
 		is_jump = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "inimigo_espada":
+	if body.name == "inimigo_espada" or body.name == "inimigo_arqueiro":
 		body.dano()
