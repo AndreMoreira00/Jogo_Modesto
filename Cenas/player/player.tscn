@@ -1,8 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://b5kpscjyxopid"]
+[gd_scene load_steps=39 format=3 uid="uid://b5kpscjyxopid"]
 
 [ext_resource type="Script" path="res://Scripts/player/player.gd" id="1_wo7wn"]
 [ext_resource type="Texture2D" uid="uid://dg4w2j282g8to" path="res://Sprites/protagonista/_Run.png" id="2_17xrt"]
 [ext_resource type="Texture2D" uid="uid://87tw8if4vn8g" path="res://Sprites/protagonista/_AttackNoMovement.png" id="3_87tky"]
+[ext_resource type="Texture2D" uid="uid://cvxcgf4uleuuq" path="res://Sprites/protagonista/_Jump.png" id="4_h86fx"]
+[ext_resource type="Texture2D" uid="uid://cun3tuqhuq53n" path="res://Sprites/protagonista/_JumpFallInbetween.png" id="5_c4lgs"]
 [ext_resource type="Texture2D" uid="uid://crj8r0jyy03ch" path="res://Sprites/protagonista/_Idle.png" id="8_agco1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn8ya"]
@@ -60,6 +62,26 @@ region = Rect2(240, 0, 120, 80)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u38c"]
 atlas = ExtResource("3_87tky")
 region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xslix"]
+atlas = ExtResource("5_c4lgs")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0wpi"]
+atlas = ExtResource("4_h86fx")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06pe3"]
+atlas = ExtResource("4_h86fx")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg75s"]
+atlas = ExtResource("4_h86fx")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqdte"]
+atlas = ExtResource("5_c4lgs")
+region = Rect2(120, 0, 120, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5g3rl"]
 atlas = ExtResource("8_agco1")
@@ -157,6 +179,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xslix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0wpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06pe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg75s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqdte")
+}],
+"loop": true,
+"name": &"pular",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5g3rl")
 }, {
 "duration": 1.0,
@@ -210,8 +252,9 @@ editor_draw_limits = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 position = Vector2(-5, 2.5)
 sprite_frames = SubResource("SpriteFrames_lr5sm")
-animation = &"andando"
+animation = &"pular"
 autoplay = "repouso"
+frame_progress = 0.695886
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(-4.5, 20.5)
