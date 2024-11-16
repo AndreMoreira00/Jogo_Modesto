@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cxlycah5bmuxj"]
+[gd_scene load_steps=37 format=3 uid="uid://cj4c053ermgux"]
 
 [ext_resource type="Script" path="res://Scripts/inimigos/fase 1/character_body_2d_inimigo_arqueiro.gd" id="1_0ft0c"]
 [ext_resource type="Script" path="res://Scripts/inimigos/fase 1/area_2d_inimigo_arqueiro.gd" id="2_rh3ya"]

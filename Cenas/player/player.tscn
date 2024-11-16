@@ -1,11 +1,16 @@
-[gd_scene load_steps=39 format=3 uid="uid://b5kpscjyxopid"]
+[gd_scene load_steps=60 format=3 uid="uid://b5kpscjyxopid"]
 
 [ext_resource type="Script" path="res://Scripts/player/player.gd" id="1_wo7wn"]
 [ext_resource type="Texture2D" uid="uid://dg4w2j282g8to" path="res://Sprites/protagonista/_Run.png" id="2_17xrt"]
 [ext_resource type="Texture2D" uid="uid://87tw8if4vn8g" path="res://Sprites/protagonista/_AttackNoMovement.png" id="3_87tky"]
+[ext_resource type="Texture2D" uid="uid://b8e41rlyaojwg" path="res://Sprites/HUD/Vida 2.png" id="3_p2nfl"]
+[ext_resource type="Texture2D" uid="uid://bdc48rxac2ibd" path="res://Sprites/HUD/coração.png" id="4_7a7lf"]
 [ext_resource type="Texture2D" uid="uid://cvxcgf4uleuuq" path="res://Sprites/protagonista/_Jump.png" id="4_h86fx"]
+[ext_resource type="Texture2D" uid="uid://dswudk1xj2unb" path="res://Sprites/protagonista/_DeathNoMovement.png" id="4_ha1o5"]
+[ext_resource type="Texture2D" uid="uid://b37v3yfqw5g44" path="res://Sprites/protagonista/_Attack2NoMovement.png" id="4_i3cml"]
 [ext_resource type="Texture2D" uid="uid://cun3tuqhuq53n" path="res://Sprites/protagonista/_JumpFallInbetween.png" id="5_c4lgs"]
 [ext_resource type="Texture2D" uid="uid://crj8r0jyy03ch" path="res://Sprites/protagonista/_Idle.png" id="8_agco1"]
+[ext_resource type="Texture2D" uid="uid://ctigihnsn2no6" path="res://Sprites/HUD/Vida.png" id="9_ui3xk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn8ya"]
 atlas = ExtResource("2_17xrt")
@@ -62,6 +67,70 @@ region = Rect2(240, 0, 120, 80)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u38c"]
 atlas = ExtResource("3_87tky")
 region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hkf2"]
+atlas = ExtResource("4_i3cml")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bplnw"]
+atlas = ExtResource("4_i3cml")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cmy2"]
+atlas = ExtResource("4_i3cml")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8yc3"]
+atlas = ExtResource("4_i3cml")
+region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80p1j"]
+atlas = ExtResource("4_i3cml")
+region = Rect2(480, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tktjj"]
+atlas = ExtResource("4_i3cml")
+region = Rect2(600, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8sx2"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axssk"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovs2f"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxltg"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou5mq"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(480, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6rn4"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(600, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv356"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(720, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ejdk"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(840, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scyn7"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(960, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nawds"]
+atlas = ExtResource("4_ha1o5")
+region = Rect2(1080, 0, 120, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xslix"]
 atlas = ExtResource("5_c4lgs")
@@ -174,8 +243,66 @@ animations = [{
 "texture": SubResource("AtlasTexture_4u38c")
 }],
 "loop": false,
-"name": &"atacando",
+"name": &"atacando_forte",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hkf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bplnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cmy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8yc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80p1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tktjj")
+}],
+"loop": false,
+"name": &"atacando_fraco",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8sx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axssk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovs2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxltg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou5mq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6rn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nv356")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ejdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scyn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nawds")
+}],
+"loop": false,
+"name": &"morrer",
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -193,7 +320,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pqdte")
 }],
-"loop": true,
+"loop": false,
 "name": &"pular",
 "speed": 5.0
 }, {
@@ -246,15 +373,52 @@ scale = Vector2(2, 2)
 script = ExtResource("1_wo7wn")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-limit_left = 0
+limit_left = -100
 editor_draw_limits = true
 
+[node name="Parallax2D" type="Parallax2D" parent="player/Camera2D"]
+
+[node name="normal" type="Sprite2D" parent="player/Camera2D/Parallax2D"]
+texture_filter = 1
+position = Vector2(0, -9)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_ui3xk")
+
+[node name="ataque" type="Sprite2D" parent="player/Camera2D/Parallax2D"]
+visible = false
+texture_filter = 1
+position = Vector2(0, -9)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_p2nfl")
+
+[node name="vidas" type="Parallax2D" parent="player/Camera2D"]
+
+[node name="1" type="Sprite2D" parent="player/Camera2D/vidas"]
+texture_filter = 1
+position = Vector2(-11, -8.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_7a7lf")
+
+[node name="2" type="Sprite2D" parent="player/Camera2D/vidas"]
+texture_filter = 1
+position = Vector2(-5, -8.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_7a7lf")
+
+[node name="3" type="Sprite2D" parent="player/Camera2D/vidas"]
+texture_filter = 1
+position = Vector2(1, -8.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_7a7lf")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+texture_filter = 1
 position = Vector2(-5, 2.5)
 sprite_frames = SubResource("SpriteFrames_lr5sm")
-animation = &"pular"
+animation = &"atacando_forte"
 autoplay = "repouso"
-frame_progress = 0.695886
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(-4.5, 20.5)

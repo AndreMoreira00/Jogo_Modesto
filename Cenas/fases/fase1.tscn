@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://q4pv7i3j77bw"]
+[gd_scene load_steps=11 format=3 uid="uid://q4pv7i3j77bw"]
 
 [ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="1_vxj0m"]
 [ext_resource type="Texture2D" uid="uid://b2jgxoprqr6hx" path="res://Sprites/Cenario/fase1/cenario 1.png" id="2_1e2u8"]
 [ext_resource type="PackedScene" uid="uid://b7aw1vdrdrvq0" path="res://Cenas/inimigos/fase1/inimigo_espada.tscn" id="2_bm3lm"]
-[ext_resource type="PackedScene" uid="uid://cxlycah5bmuxj" path="res://Cenas/inimigos/fase1/inimigo_arqueiro.tscn" id="3_6kju3"]
 [ext_resource type="Texture2D" uid="uid://cfpby8u105117" path="res://Sprites/Cenario/fase1/areia.png" id="3_arhr1"]
 [ext_resource type="Texture2D" uid="uid://dbx5i2vhallmr" path="res://Sprites/Cenario/fase1/ceu 2.png" id="3_m7766"]
 [ext_resource type="Texture2D" uid="uid://cjxjs84oc6g8e" path="res://Sprites/Cenario/fase1/cenario 2.png" id="4_qg1wi"]
@@ -19,14 +18,12 @@ size = Vector2(62, 895)
 [node name="Fase1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_vxj0m")]
-position = Vector2(69, 564)
+position = Vector2(102, 561)
+scale = Vector2(4, 4)
 
 [node name="inimigo_espada" parent="." instance=ExtResource("2_bm3lm")]
 position = Vector2(2055, 645)
 scale = Vector2(2.5, 2.5)
-
-[node name="inimigo_arqueiro" parent="." instance=ExtResource("3_6kju3")]
-position = Vector2(701, 513)
 
 [node name="BG" type="Node2D" parent="."]
 z_index = -3

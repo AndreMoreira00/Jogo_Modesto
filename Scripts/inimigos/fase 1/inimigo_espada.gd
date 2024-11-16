@@ -32,8 +32,8 @@ func patrol(delta: float) -> void:
 		distance_traveled = 0  
 		$Area2D/AnimatedSprite2D.scale.x = move_direction * -1
 
-func dano():
-	vida -=1
+func dano(DANO):
+	vida-=DANO
 	if vida<= 0:
 		is_dead = true
 		$Area2D/AnimatedSprite2D.play("morrer")
