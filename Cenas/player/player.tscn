@@ -415,9 +415,9 @@ texture = ExtResource("4_7a7lf")
 texture_filter = 1
 position = Vector2(-5, 2.5)
 sprite_frames = SubResource("SpriteFrames_lr5sm")
-animation = &"atacando_forte"
+animation = &"morrer"
 autoplay = "repouso"
-frame = 3
+frame = 9
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]

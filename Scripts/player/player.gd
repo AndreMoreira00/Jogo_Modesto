@@ -19,6 +19,10 @@ func _ready():
 
 func _process(delta: float) -> void:
 	match vida:
+		0:
+			$"Camera2D/vidas/1".visible = false
+			$"Camera2D/vidas/2".visible = false
+			$"Camera2D/vidas/3".visible = false
 		1:
 			$"Camera2D/vidas/1".visible = true
 			$"Camera2D/vidas/2".visible = false
@@ -31,7 +35,12 @@ func _process(delta: float) -> void:
 			$"Camera2D/vidas/1".visible = true
 			$"Camera2D/vidas/2".visible = true
 			$"Camera2D/vidas/3".visible = true
-
+			
+	if vida<= 0:
+		is_dead = true
+		$AnimatedSprite2D.play("morrer")
+		SPEED = 0
+		
 func _physics_process(delta: float) -> void:
 	# Adiciona gravidade
 	if not is_on_floor():
@@ -106,3 +115,7 @@ func _on_animation_dead_finished():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "inimigo_espada" or body.name == "inimigo_arqueiro":
 		body.dano(DANO)
+
+func dano_player(dano):
+	vida-=dano
+	
