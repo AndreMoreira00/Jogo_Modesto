@@ -11,7 +11,6 @@ var is_jump = false
 
 var DANO
 
-# Função de física do personagem
 func _ready():
 	# Conectando o sinal de fim de animação ao método
 	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_ataque_finished"))
@@ -38,9 +37,9 @@ func _process(delta: float) -> void:
 			
 	if vida<= 0:
 		is_dead = true
-		$AnimatedSprite2D.play("morrer")
 		SPEED = 0
-		
+		$AnimatedSprite2D.play("morrer")
+
 func _physics_process(delta: float) -> void:
 	# Adiciona gravidade
 	if not is_on_floor():
@@ -79,6 +78,8 @@ func _get_input():
 	# Se está atacando, evita trocar de animação
 	if is_attacking:
 		return
+	if is_dead:
+		return
 
 	var direction = int(Input.is_action_pressed("direita")) - int(Input.is_action_pressed("esquerda"))
 	move_and_slide()
@@ -99,6 +100,7 @@ func _get_input():
 		$Area2D/HitBox.position.x = -34
 	else:
 		$Area2D/HitBox.position.x = 25
+		
 # Função para resetar o estado de ataque quando a animação termina
 func _on_animation_ataque_finished():
 	if $AnimatedSprite2D.animation == "atacando_fraco" or $AnimatedSprite2D.animation == "atacando_forte":
@@ -109,7 +111,6 @@ func _on_animation_ataque_finished():
 		
 func _on_animation_dead_finished():
 	if $AnimatedSprite2D.animation == "morrer":
-		is_dead = false
 		$'.'.queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
