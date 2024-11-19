@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4cyfafkbp7a6"]
+
+[ext_resource type="Script" path="res://Scripts/inimigos/fase 2/boss_fase_2.gd" id="1_vsdbl"]
+
+[node name="boss_fase2" type="Node2D"]
+script = ExtResource("1_vsdbl")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpf188a12c1f3"]
+
+[ext_resource type="Script" path="res://Scripts/inimigos/fase 3/boss_fase_3.gd" id="1_rfa73"]
+
+[node name="boss_fase_3" type="Node2D"]
+script = ExtResource("1_rfa73")

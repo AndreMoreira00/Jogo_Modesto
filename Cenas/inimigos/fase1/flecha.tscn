@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://btn4raoc8n6mi"]
+
+[ext_resource type="Script" path="res://Scripts/inimigos/fase 1/area_2d_flecha_do_arqueiro.gd" id="1_k0jra"]
+[ext_resource type="Texture2D" uid="uid://c6x185cmxa5or" path="res://Sprites/fase 1/INIMIGOS/COMUM/arco/Arrow.png" id="2_1bbyc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ui0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1bbyc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_er4xw"]
+radius = 3.0
+height = 46.0
+
+[node name="flecha" type="Area2D" groups=["flecha"]]
+script = ExtResource("1_k0jra")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(129, 49)
+rotation = -1.5708
+sprite_frames = SubResource("SpriteFrames_1ui0a")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(129, 48)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_er4xw")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
