@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhiffoli3eywk"
-path="res://.godot/imported/Idle.png-41bcc81c3e0aadd8c42136774922ad19.ctex"
+uid="uid://dsd0bok8t3pfb"
+path="res://.godot/imported/_CrouchFull_smoke.png-640fbc91b6d1da6e08f84993c87821e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-41bcc81c3e0aadd8c42136774922ad19.ctex"]
+source_file="res://Sprites/protagonista/_CrouchFull_smoke.png"
+dest_files=["res://.godot/imported/_CrouchFull_smoke.png-640fbc91b6d1da6e08f84993c87821e0.ctex"]
 
 [params]
 

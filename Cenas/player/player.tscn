@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://b5kpscjyxopid"]
+[gd_scene load_steps=65 format=3 uid="uid://b5kpscjyxopid"]
 
 [ext_resource type="Script" path="res://Scripts/player/player.gd" id="1_wo7wn"]
 [ext_resource type="Texture2D" uid="uid://dg4w2j282g8to" path="res://Sprites/protagonista/_Run.png" id="2_17xrt"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b37v3yfqw5g44" path="res://Sprites/protagonista/_Attack2NoMovement.png" id="4_i3cml"]
 [ext_resource type="Texture2D" uid="uid://cun3tuqhuq53n" path="res://Sprites/protagonista/_JumpFallInbetween.png" id="5_c4lgs"]
 [ext_resource type="Texture2D" uid="uid://crj8r0jyy03ch" path="res://Sprites/protagonista/_Idle.png" id="8_agco1"]
+[ext_resource type="Texture2D" uid="uid://dsd0bok8t3pfb" path="res://Sprites/protagonista/_CrouchFull_smoke.png" id="8_uc73w"]
 [ext_resource type="Texture2D" uid="uid://ctigihnsn2no6" path="res://Sprites/HUD/Vida.png" id="9_ui3xk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouyce"]
@@ -94,6 +95,18 @@ region = Rect2(480, 0, 120, 80)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tktjj"]
 atlas = ExtResource("4_i3cml")
 region = Rect2(600, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5vbb"]
+atlas = ExtResource("8_uc73w")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umsa0"]
+atlas = ExtResource("8_uc73w")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clsnu"]
+atlas = ExtResource("8_uc73w")
+region = Rect2(240, 0, 120, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8sx2"]
 atlas = ExtResource("4_ha1o5")
@@ -274,6 +287,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_g5vbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umsa0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clsnu")
+}],
+"loop": false,
+"name": &"esquiva",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_v8sx2")
 }, {
 "duration": 1.0,
@@ -427,8 +454,10 @@ show_percentage = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_lr5sm")
-animation = &"repouso"
+animation = &"esquiva"
 autoplay = "repouso"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(-4.5, 20.5)

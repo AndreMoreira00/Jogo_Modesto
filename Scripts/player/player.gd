@@ -11,6 +11,7 @@ var stamina_recovery_rate = 10.0
 var is_attacking = false
 var is_dead = false
 var is_jump = false
+var is_dodge = false
 
 var DANO
 
@@ -18,6 +19,7 @@ func _ready():
 	# Conectando o sinal de fim de animação ao método
 	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_ataque_finished"))
 	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_dead_finished"))
+	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_dodge_finished"))
 	$Camera2D/ProgressBar.max_value = max_stamina
 	$Camera2D/ProgressBar.value = current_stamina
 
@@ -87,7 +89,12 @@ func _physics_process(delta: float) -> void:
 			$Camera2D/Parallax2D/normal.visible = false
 			$Camera2D/Parallax2D/ataque.visible = true
 			current_stamina -= 60 
-			
+		
+		if Input.is_action_just_pressed("esquiva") and not is_dodge and current_stamina >= 70:
+			is_dodge = true
+			$AnimatedSprite2D.play("esquiva")
+			$".".collision_layer = 8
+			current_stamina -= 70 
 	
 	
 # Troca a animação do player
@@ -96,6 +103,8 @@ func _get_input():
 	if is_attacking:
 		return
 	if is_dead:
+		return
+	if is_dodge:
 		return
 
 	var direction = int(Input.is_action_pressed("direita")) - int(Input.is_action_pressed("esquerda"))
@@ -129,6 +138,11 @@ func _on_animation_ataque_finished():
 func _on_animation_dead_finished():
 	if $AnimatedSprite2D.animation == "morrer":
 		$'.'.queue_free()
+
+func _on_animation_dodge_finished():
+	if $AnimatedSprite2D.animation == "esquiva":
+		is_dodge = false
+		$".".collision_layer = 1
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "inimigo_espada" or body.name == "inimigo_arqueiro":

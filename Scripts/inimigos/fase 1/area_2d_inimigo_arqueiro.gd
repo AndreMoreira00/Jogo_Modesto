@@ -21,8 +21,9 @@ func _process(delta: float) -> void:
 			if sign(posicao_flecha.position.x) == -1:
 				posicao_flecha.position.x *= -1
 		
-		if flecha_cooldown.is_stopped() and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 12:
+		if flecha_cooldown.is_stopped() and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 12:			
 			shoot_flecha()
+			
 # Função chamada ao detectar uma entrada de colisão
 func _on_body_entered(body: Node2D) -> void:
 	# Verifica se o corpo colidido é o "player"
