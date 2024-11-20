@@ -142,18 +142,18 @@ func dano_player(dano):
 			else:
 				$"Camera2D/vidas/1".play("metade")
 		1.0:
-			$"Camera2D/vidas/2".play("sumindo")
-			if dano == 1:
+			if dano == 1 and vida != 1:
 				$"Camera2D/vidas/1".play("dano")
+			$"Camera2D/vidas/2".play("sumindo")
 		1.5:
 			if dano == 1:
 				$"Camera2D/vidas/1".play("dano")
 			else:
 				$"Camera2D/vidas/2".play("dano")
 		2.0:
-			$"Camera2D/vidas/3".play("sumindo")	
-			if dano == 1:
+			if dano == 1 and vida != 2:
 				$"Camera2D/vidas/2".play("sumindo")
+			$"Camera2D/vidas/3".play("sumindo")
 		2.5:
 			if dano == 1:
 				$"Camera2D/vidas/3".play("sumindo")
