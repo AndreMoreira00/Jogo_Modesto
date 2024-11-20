@@ -42,5 +42,7 @@ func _on_body_exited(body: Node2D) -> void:
 func _on_frame_changed():
 	if $AnimatedSprite2D.frame == 2 and $AnimatedSprite2D.animation == "atacar":
 		$HitBox/HitBox.disabled = false
-	elif $AnimatedSprite2D.frame == 4:
+	elif $AnimatedSprite2D.frame == 4 and $AnimatedSprite2D.animation == "atacar":
+		$HitBox/HitBox.disabled = true
+	else:
 		$HitBox/HitBox.disabled = true

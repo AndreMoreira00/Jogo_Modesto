@@ -1,40 +1,67 @@
-[gd_scene load_steps=9 format=3 uid="uid://q4pv7i3j77bw"]
+[gd_scene load_steps=26 format=3 uid="uid://q4pv7i3j77bw"]
 
+[ext_resource type="PackedScene" uid="uid://8ahga7ag21xq" path="res://Cenas/player/pocao.tscn" id="1_tqrnt"]
 [ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="1_vxj0m"]
 [ext_resource type="Texture2D" uid="uid://bujs6uvrrs66n" path="res://Sprites/Cenario/objetos/areia.png" id="3_jgadv"]
+[ext_resource type="PackedScene" uid="uid://b7aw1vdrdrvq0" path="res://Cenas/inimigos/fase1/inimigo_espada.tscn" id="3_p0wmb"]
 [ext_resource type="Texture2D" uid="uid://o677lda4o0p6" path="res://Sprites/Cenario/objetos/arvore.png" id="4_455s0"]
 [ext_resource type="Texture2D" uid="uid://j0dvenv0oqdk" path="res://Sprites/Cenario/objetos/pedra.png" id="5_1dx7m"]
+[ext_resource type="Texture2D" uid="uid://d2mjph2aob7h5" path="res://Sprites/Cenario/objetos/Brown-white_shell1_shadow1.png" id="6_expag"]
 [ext_resource type="Texture2D" uid="uid://cjhfliutx1usl" path="res://Sprites/Cenario/objetos/textura areia.png" id="6_ul5a1"]
+[ext_resource type="Texture2D" uid="uid://cqha5v2d0jalb" path="res://Sprites/Cenario/objetos/Ship1_shadow2.png" id="7_qdcwl"]
 [ext_resource type="Texture2D" uid="uid://bxwxwpbxhdhkf" path="res://Sprites/Cenario/objetos/ceu2.png" id="8_2p2qb"]
+[ext_resource type="Texture2D" uid="uid://dho8dd0k4m0yb" path="res://Sprites/Cenario/objetos/Steering_wheel_shadow1.png" id="8_lhmgq"]
+[ext_resource type="Texture2D" uid="uid://btw7wjgnyh0pn" path="res://Sprites/Cenario/objetos/Turtle_shell_shadow1.png" id="9_oo4ow"]
+[ext_resource type="Texture2D" uid="uid://ceyiqocwteuml" path="res://Sprites/Cenario/objetos/Statue1_shadow1.png" id="10_ksah8"]
+[ext_resource type="Texture2D" uid="uid://sau3a4dxq1ym" path="res://Sprites/Cenario/objetos/Dragon_bones_shadow1.png" id="11_k63jg"]
+[ext_resource type="Texture2D" uid="uid://b0yfvue6awlr5" path="res://Sprites/Cenario/objetos/Monster_fish_bones_shadow1.png" id="12_fpxck"]
+[ext_resource type="Texture2D" uid="uid://n8d2y5sy5qfh" path="res://Sprites/Cenario/objetos/Anchor_shadow3.png" id="13_kjcyu"]
+[ext_resource type="Texture2D" uid="uid://cvlp8wmlhmjm7" path="res://Sprites/Cenario/objetos/Pearl_sea_shell1_shadow1.png" id="14_g0uqn"]
+[ext_resource type="Texture2D" uid="uid://cgnyvq36duqmj" path="res://Sprites/Cenario/objetos/Starfish1_shadow1.png" id="15_sp0bg"]
+[ext_resource type="Texture2D" uid="uid://dtn18pejrgmqe" path="res://Sprites/Cenario/objetos/Sea_insect_shadow1.png" id="16_qdv5h"]
+[ext_resource type="Texture2D" uid="uid://d34dap2aw75xx" path="res://Sprites/Cenario/objetos/Yellow-white-gray_shell1_shadow1.png" id="17_j7krr"]
+[ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="19_fm0xv"]
+[ext_resource type="Texture2D" uid="uid://o8ied4l7xo3q" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Passagem fase para fase 2 - camada superior.png" id="20_cqw52"]
+[ext_resource type="Texture2D" uid="uid://c8psk0fucg7vr" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png" id="20_wdbx6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6eg0"]
-size = Vector2(5579, 74)
+size = Vector2(9473.5, 74)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3tpc"]
 size = Vector2(62, 895)
 
 [node name="Fase1" type="Node2D"]
 
+[node name="Pocoes" type="Node2D" parent="."]
+
+[node name="pocao" parent="Pocoes" instance=ExtResource("1_tqrnt")]
+position = Vector2(1470, 698)
+scale = Vector2(2, 2)
+
 [node name="Player" parent="." instance=ExtResource("1_vxj0m")]
-position = Vector2(132, 557)
+position = Vector2(55.0001, 646)
 scale = Vector2(2.5, 2.5)
+
+[node name="inimigo_espada" parent="." instance=ExtResource("3_p0wmb")]
+position = Vector2(749, 683)
+scale = Vector2(2, 2)
 
 [node name="BG" type="Node2D" parent="."]
 z_index = -3
 
-[node name="01" type="Parallax2D" parent="BG"]
+[node name="areia" type="Parallax2D" parent="BG"]
 scale = Vector2(2, 2)
 
-[node name="texture" type="Sprite2D" parent="BG/01"]
+[node name="texture" type="Sprite2D" parent="BG/areia"]
 position = Vector2(-159, 318)
-scale = Vector2(45.9609, 3.9375)
+scale = Vector2(78.7344, 3.9375)
 texture = ExtResource("6_ul5a1")
 centered = false
 flip_h = true
 
-[node name="02" type="Parallax2D" parent="BG"]
+[node name="areia2" type="Parallax2D" parent="BG"]
 
-[node name="texture" type="Sprite2D" parent="BG/02"]
+[node name="texture" type="Sprite2D" parent="BG/areia2"]
 position = Vector2(-1.00001, 0.54361)
 rotation = 1.5708
 scale = Vector2(16.6437, 4.97241)
@@ -42,26 +69,26 @@ texture = ExtResource("6_ul5a1")
 centered = false
 flip_h = true
 
-[node name="03" type="Parallax2D" parent="BG"]
+[node name="praia" type="Parallax2D" parent="BG"]
 
-[node name="texture" type="Sprite2D" parent="BG/03"]
-position = Vector2(-308, 0)
-scale = Vector2(10.1962, 2)
+[node name="texture" type="Sprite2D" parent="BG/praia"]
+position = Vector2(-316, 0)
+scale = Vector2(16.0087, 2)
 texture = ExtResource("3_jgadv")
 centered = false
 flip_h = true
 
-[node name="04" type="Parallax2D" parent="BG"]
+[node name="objetos" type="Parallax2D" parent="BG"]
 z_index = 5
 
-[node name="texture" type="Sprite2D" parent="BG/04"]
+[node name="texture" type="Sprite2D" parent="BG/objetos"]
 z_index = 10
 position = Vector2(630, 465)
 texture = ExtResource("4_455s0")
 centered = false
 flip_h = true
 
-[node name="texture2" type="Sprite2D" parent="BG/04"]
+[node name="texture2" type="Sprite2D" parent="BG/objetos"]
 z_index = 10
 position = Vector2(943, 681)
 scale = Vector2(0.5, 0.5)
@@ -69,7 +96,7 @@ texture = ExtResource("5_1dx7m")
 centered = false
 flip_h = true
 
-[node name="texture3" type="Sprite2D" parent="BG/04"]
+[node name="texture3" type="Sprite2D" parent="BG/objetos"]
 z_index = -3
 position = Vector2(3010, 129)
 scale = Vector2(2, 2)
@@ -77,14 +104,14 @@ texture = ExtResource("5_1dx7m")
 centered = false
 flip_h = true
 
-[node name="texture4" type="Sprite2D" parent="BG/04"]
+[node name="texture4" type="Sprite2D" parent="BG/objetos"]
 z_index = 10
 position = Vector2(2337, 637)
 texture = ExtResource("4_455s0")
 centered = false
 flip_h = true
 
-[node name="texture5" type="Sprite2D" parent="BG/04"]
+[node name="texture5" type="Sprite2D" parent="BG/objetos"]
 z_index = 10
 position = Vector2(2650, 853)
 scale = Vector2(0.5, 0.5)
@@ -92,14 +119,14 @@ texture = ExtResource("5_1dx7m")
 centered = false
 flip_h = true
 
-[node name="texture6" type="Sprite2D" parent="BG/04"]
+[node name="texture6" type="Sprite2D" parent="BG/objetos"]
 z_index = -3
 position = Vector2(3769, 320)
 texture = ExtResource("4_455s0")
 centered = false
 flip_h = true
 
-[node name="texture7" type="Sprite2D" parent="BG/04"]
+[node name="texture7" type="Sprite2D" parent="BG/objetos"]
 z_index = -3
 position = Vector2(4082, 536)
 scale = Vector2(0.5, 0.5)
@@ -107,32 +134,161 @@ texture = ExtResource("5_1dx7m")
 centered = false
 flip_h = true
 
-[node name="05" type="Parallax2D" parent="BG"]
+[node name="texture8" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(3312, 841)
+texture = ExtResource("6_expag")
+centered = false
+flip_h = true
 
-[node name="texture" type="Sprite2D" parent="BG/05"]
+[node name="texture9" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(-94, 788)
+scale = Vector2(3, 3)
+texture = ExtResource("7_qdcwl")
+centered = false
+flip_h = true
+
+[node name="texture10" type="Sprite2D" parent="BG/objetos"]
+z_index = 2
+position = Vector2(896, 725)
+scale = Vector2(2, 2)
+texture = ExtResource("8_lhmgq")
+centered = false
+flip_h = true
+
+[node name="texture11" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(683, 807)
+rotation = 1.5708
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("9_oo4ow")
+centered = false
+flip_h = true
+
+[node name="texture12" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(3573, 383)
+texture = ExtResource("10_ksah8")
+centered = false
+flip_h = true
+
+[node name="texture13" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(1835, 807)
+rotation = 0.516617
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("11_k63jg")
+centered = false
+flip_h = true
+
+[node name="texture14" type="Sprite2D" parent="BG/objetos"]
+z_index = 1
+position = Vector2(1192, 746)
+texture = ExtResource("12_fpxck")
+centered = false
+flip_h = true
+
+[node name="texture15" type="Sprite2D" parent="BG/objetos"]
+z_index = 1
+position = Vector2(3942, 736)
+scale = Vector2(2, 2)
+texture = ExtResource("13_kjcyu")
+centered = false
+flip_h = true
+
+[node name="texture16" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(3666, 774)
+texture = ExtResource("14_g0uqn")
+centered = false
+flip_h = true
+
+[node name="texture17" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(4517, 612)
+texture = ExtResource("15_sp0bg")
+centered = false
+flip_h = true
+
+[node name="texture18" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(2311, 628)
+texture = ExtResource("15_sp0bg")
+centered = false
+flip_h = true
+
+[node name="texture19" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(2308, 837)
+texture = ExtResource("16_qdv5h")
+centered = false
+flip_h = true
+
+[node name="texture20" type="Sprite2D" parent="BG/objetos"]
+z_index = -3
+position = Vector2(1528, 829)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("17_j7krr")
+centered = false
+flip_h = true
+
+[node name="nuvem" type="Parallax2D" parent="BG"]
+
+[node name="texture" type="Sprite2D" parent="BG/nuvem"]
 position = Vector2(-312, 4)
 scale = Vector2(8, 1.6)
 texture = ExtResource("8_2p2qb")
 centered = false
 flip_h = true
 
-[node name="texture2" type="Sprite2D" parent="BG/05"]
+[node name="texture2" type="Sprite2D" parent="BG/nuvem"]
 position = Vector2(4293, 5)
 scale = Vector2(8, 1.6)
 texture = ExtResource("8_2p2qb")
 centered = false
 flip_h = true
 
+[node name="final" type="Parallax2D" parent="BG"]
+
+[node name="texture" type="Sprite2D" parent="BG/final"]
+texture_filter = 1
+position = Vector2(9119, -246)
+scale = Vector2(-2, 2)
+texture = ExtResource("19_fm0xv")
+centered = false
+flip_h = true
+
+[node name="texture2" type="Sprite2D" parent="BG/final"]
+z_index = 5
+texture_filter = 1
+position = Vector2(9531, -248)
+scale = Vector2(-2.5817, 2)
+texture = ExtResource("20_wdbx6")
+centered = false
+flip_h = true
+
+[node name="texture3" type="Sprite2D" parent="BG/final"]
+z_index = 3
+texture_filter = 1
+position = Vector2(8735, 186)
+scale = Vector2(-2.17708, 2)
+texture = ExtResource("20_cqw52")
+centered = false
+flip_h = true
+
 [node name="chao" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao"]
-position = Vector2(2777, 750)
+position = Vector2(4733, 797)
 shape = SubResource("RectangleShape2D_g6eg0")
-metadata/_edit_lock_ = true
 
 [node name="parede" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="parede"]
 position = Vector2(-34, 444.5)
 shape = SubResource("RectangleShape2D_h3tpc")
-metadata/_edit_lock_ = true
+
+[node name="Passagem" type="CollisionShape2D" parent="parede"]
+position = Vector2(8854, 317)
+shape = SubResource("RectangleShape2D_h3tpc")

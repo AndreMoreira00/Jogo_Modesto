@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5jl7riyb0s44"
-path="res://.godot/imported/Layer 1_Attack1.png-42e2c4e20843c7994b0bd7254bce498e.ctex"
+uid="uid://b0yfvue6awlr5"
+path="res://.godot/imported/Monster_fish_bones_shadow1.png-e8ddde3b31dde69d9bc7669a159db2fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/Layer 1_Attack1.png"
-dest_files=["res://.godot/imported/Layer 1_Attack1.png-42e2c4e20843c7994b0bd7254bce498e.ctex"]
+source_file="res://Sprites/Cenario/objetos/Monster_fish_bones_shadow1.png"
+dest_files=["res://.godot/imported/Monster_fish_bones_shadow1.png-e8ddde3b31dde69d9bc7669a159db2fa.ctex"]
 
 [params]
 

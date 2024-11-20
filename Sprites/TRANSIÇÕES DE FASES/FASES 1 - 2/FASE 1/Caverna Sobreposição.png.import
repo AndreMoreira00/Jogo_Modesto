@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcrvc6578od56"
-path="res://.godot/imported/Layer 1_Attack5.png-1f84f3ec645faf9b3e47589971381b0e.ctex"
+uid="uid://c8psk0fucg7vr"
+path="res://.godot/imported/Caverna Sobreposição.png-2358f71ef70c6ba50714fb5f227516dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/Layer 1_Attack5.png"
-dest_files=["res://.godot/imported/Layer 1_Attack5.png-1f84f3ec645faf9b3e47589971381b0e.ctex"]
+source_file="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png"
+dest_files=["res://.godot/imported/Caverna Sobreposição.png-2358f71ef70c6ba50714fb5f227516dd.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhiffoli3eywk"
-path="res://.godot/imported/Idle.png-41bcc81c3e0aadd8c42136774922ad19.ctex"
+uid="uid://n8d2y5sy5qfh"
+path="res://.godot/imported/Anchor_shadow3.png-91866381500e8f145614ac8a074b347c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-41bcc81c3e0aadd8c42136774922ad19.ctex"]
+source_file="res://Sprites/Cenario/objetos/Anchor_shadow3.png"
+dest_files=["res://.godot/imported/Anchor_shadow3.png-91866381500e8f145614ac8a074b347c.ctex"]
 
 [params]
 

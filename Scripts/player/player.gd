@@ -154,3 +154,6 @@ func dano_player(dano):
 func update_stamina_bar():
 	# Envia o valor atualizado para a UI
 	$Camera2D/ProgressBar.value = current_stamina
+
+func coletar_pocao():
+	vida += 1
