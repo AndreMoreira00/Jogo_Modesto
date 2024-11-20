@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://8ahga7ag21xq" path="res://Cenas/player/pocao.tscn" id="1_tqrnt"]
 [ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="1_vxj0m"]
 [ext_resource type="Texture2D" uid="uid://bujs6uvrrs66n" path="res://Sprites/Cenario/objetos/areia.png" id="3_jgadv"]
-[ext_resource type="PackedScene" uid="uid://b7aw1vdrdrvq0" path="res://Cenas/inimigos/fase1/inimigo_espada.tscn" id="3_p0wmb"]
 [ext_resource type="Texture2D" uid="uid://o677lda4o0p6" path="res://Sprites/Cenario/objetos/arvore.png" id="4_455s0"]
 [ext_resource type="Texture2D" uid="uid://j0dvenv0oqdk" path="res://Sprites/Cenario/objetos/pedra.png" id="5_1dx7m"]
 [ext_resource type="Texture2D" uid="uid://d2mjph2aob7h5" path="res://Sprites/Cenario/objetos/Brown-white_shell1_shadow1.png" id="6_expag"]
@@ -23,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="19_fm0xv"]
 [ext_resource type="Texture2D" uid="uid://o8ied4l7xo3q" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Passagem fase para fase 2 - camada superior.png" id="20_cqw52"]
 [ext_resource type="Texture2D" uid="uid://c8psk0fucg7vr" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png" id="20_wdbx6"]
+[ext_resource type="PackedScene" uid="uid://cc0y1bib0oeql" path="res://Cenas/inimigos/fase1/boss_fase_1.tscn" id="23_t6crv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6eg0"]
 size = Vector2(9473.5, 74)
@@ -42,9 +42,8 @@ scale = Vector2(2, 2)
 position = Vector2(55.0001, 646)
 scale = Vector2(2.5, 2.5)
 
-[node name="inimigo_espada" parent="." instance=ExtResource("3_p0wmb")]
-position = Vector2(749, 683)
-scale = Vector2(2, 2)
+[node name="Boss_Fase1" parent="." instance=ExtResource("23_t6crv")]
+position = Vector2(711, 688)
 
 [node name="BG" type="Node2D" parent="."]
 z_index = -3

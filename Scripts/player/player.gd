@@ -145,7 +145,7 @@ func _on_animation_dodge_finished():
 		$".".collision_layer = 1
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "inimigo_espada" or body.name == "inimigo_arqueiro":
+	if body.name == "inimigo" or body.name == "inimigo_arqueiro" or body.name == "boss":
 		body.dano(DANO)
 
 func dano_player(dano):
