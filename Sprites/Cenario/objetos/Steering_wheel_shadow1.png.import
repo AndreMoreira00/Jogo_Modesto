@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsi76q6elxbg1"
-path="res://.godot/imported/Layer 1_Attack2.png-be6fd2a318f2d660faa0109c17caf67c.ctex"
+uid="uid://dho8dd0k4m0yb"
+path="res://.godot/imported/Steering_wheel_shadow1.png-b3ed8aae7957c1670d5f3659d9dc65e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/Layer 1_Attack2.png"
-dest_files=["res://.godot/imported/Layer 1_Attack2.png-be6fd2a318f2d660faa0109c17caf67c.ctex"]
+source_file="res://Sprites/Cenario/objetos/Steering_wheel_shadow1.png"
+dest_files=["res://.godot/imported/Steering_wheel_shadow1.png-b3ed8aae7957c1670d5f3659d9dc65e7.ctex"]
 
 [params]
 

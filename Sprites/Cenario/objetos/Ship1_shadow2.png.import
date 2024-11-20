@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctqkg4mou51tb"
-path="res://.godot/imported/Layer 1_Attack3.png-0b0437cacfac9ae01b2b002ed1dac3f9.ctex"
+uid="uid://cqha5v2d0jalb"
+path="res://.godot/imported/Ship1_shadow2.png-435acf253bd2d2f66d649c43c6c84980.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/Layer 1_Attack3.png"
-dest_files=["res://.godot/imported/Layer 1_Attack3.png-0b0437cacfac9ae01b2b002ed1dac3f9.ctex"]
+source_file="res://Sprites/Cenario/objetos/Ship1_shadow2.png"
+dest_files=["res://.godot/imported/Ship1_shadow2.png-435acf253bd2d2f66d649c43c6c84980.ctex"]
 
 [params]
 

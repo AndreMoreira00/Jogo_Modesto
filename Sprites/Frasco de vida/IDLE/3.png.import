@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c42eajhjy5ke8"
-path="res://.godot/imported/Layer 1_Attack4.png-6be91d19f30ab84d426d54724c0848d2.ctex"
+uid="uid://1nut22elar4m"
+path="res://.godot/imported/3.png-fff73b9ac28c1a2c37b204d60eade62c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player/Layer 1_Attack4.png"
-dest_files=["res://.godot/imported/Layer 1_Attack4.png-6be91d19f30ab84d426d54724c0848d2.ctex"]
+source_file="res://Sprites/Frasco de vida/IDLE/3.png"
+dest_files=["res://.godot/imported/3.png-fff73b9ac28c1a2c37b204d60eade62c.ctex"]
 
 [params]
 
