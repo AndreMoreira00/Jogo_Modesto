@@ -3,7 +3,7 @@ extends CharacterBody2D
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 
-var vida = 3
+var vida = 3.0
 var max_stamina = 100
 var current_stamina = max_stamina
 var stamina_recovery_rate = 10.0 
@@ -24,23 +24,6 @@ func _ready():
 	$Camera2D/ProgressBar.value = current_stamina
 
 func _process(delta: float) -> void:
-	match vida:
-		0:
-			$"Camera2D/vidas/1".visible = false
-			$"Camera2D/vidas/2".visible = false
-			$"Camera2D/vidas/3".visible = false
-		1:
-			$"Camera2D/vidas/1".visible = true
-			$"Camera2D/vidas/2".visible = false
-			$"Camera2D/vidas/3".visible = false
-		2:
-			$"Camera2D/vidas/1".visible = true
-			$"Camera2D/vidas/2".visible = true
-			$"Camera2D/vidas/3".visible = false
-		3:
-			$"Camera2D/vidas/1".visible = true
-			$"Camera2D/vidas/2".visible = true
-			$"Camera2D/vidas/3".visible = true
 			
 	if vida<= 0:
 		is_dead = true
@@ -150,6 +133,32 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func dano_player(dano):
 	vida-=dano
+	match vida:
+		0.0:
+			$"Camera2D/vidas/1".play("sumindo")
+		0.5:
+			if dano == 1:
+				$"Camera2D/vidas/1".play("sumindo")
+			else:
+				$"Camera2D/vidas/1".play("metade")
+		1.0:
+			$"Camera2D/vidas/2".play("sumindo")
+			if dano == 1:
+				$"Camera2D/vidas/1".play("dano")
+		1.5:
+			if dano == 1:
+				$"Camera2D/vidas/1".play("dano")
+			else:
+				$"Camera2D/vidas/2".play("dano")
+		2.0:
+			$"Camera2D/vidas/3".play("sumindo")	
+			if dano == 1:
+				$"Camera2D/vidas/2".play("sumindo")
+		2.5:
+			if dano == 1:
+				$"Camera2D/vidas/3".play("sumindo")
+			else:
+				$"Camera2D/vidas/3".play("dano")
 	
 func update_stamina_bar():
 	# Envia o valor atualizado para a UI

@@ -1,6 +1,6 @@
 extends Area2D
 
-var dano = 1
+var dano = 0.5
 
 func _ready() -> void:
 	pass # Replace with function body.
