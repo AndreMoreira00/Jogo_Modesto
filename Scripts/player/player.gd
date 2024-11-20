@@ -24,7 +24,9 @@ func _ready():
 	$Camera2D/ProgressBar.value = current_stamina
 
 func _process(delta: float) -> void:
-			
+	if vida > 3:
+		vida = 3
+	
 	if vida<= 0:
 		is_dead = true
 		SPEED = 0
@@ -166,3 +168,16 @@ func update_stamina_bar():
 
 func coletar_pocao():
 	vida += 1
+	match vida:
+		0.5:
+			$"Camera2D/vidas/2".play("metade")
+		1.0:
+			$"Camera2D/vidas/2".play("full")
+		1.5:
+			$"Camera2D/vidas/3".play("metade")
+		2.0:
+			$"Camera2D/vidas/3".play("full")
+		2.5:
+			$"Camera2D/vidas/3".play("full")
+		3.0:
+			$"Camera2D/vidas/3".play("full")

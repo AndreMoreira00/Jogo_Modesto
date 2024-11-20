@@ -509,9 +509,8 @@ texture = ExtResource("3_p2nfl")
 position = Vector2(-11.9, -8.4)
 scale = Vector2(0.35, 0.35)
 sprite_frames = SubResource("SpriteFrames_aee8f")
-animation = &"full"
+animation = &"sumindo"
 autoplay = "full"
-frame_progress = 0.459485
 
 [node name="2" type="AnimatedSprite2D" parent="player/Camera2D/vidas"]
 position = Vector2(-5.4, -8.4)
