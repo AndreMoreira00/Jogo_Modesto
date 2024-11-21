@@ -167,17 +167,22 @@ func update_stamina_bar():
 	$Camera2D/ProgressBar.value = current_stamina
 
 func coletar_pocao():
-	vida += 1
 	match vida:
 		0.5:
+			$"Camera2D/vidas/1".play("full")
 			$"Camera2D/vidas/2".play("metade")
 		1.0:
+			$"Camera2D/vidas/1".play("full")
 			$"Camera2D/vidas/2".play("full")
 		1.5:
+			$"Camera2D/vidas/2".play("full")
 			$"Camera2D/vidas/3".play("metade")
 		2.0:
+			$"Camera2D/vidas/2".play("full")
 			$"Camera2D/vidas/3".play("full")
 		2.5:
+			$"Camera2D/vidas/2".play("full")
 			$"Camera2D/vidas/3".play("full")
 		3.0:
 			$"Camera2D/vidas/3".play("full")
+	vida += 1

@@ -18,7 +18,6 @@ func dano(DANO):
 	if vida<= 0:
 		is_dead = true
 		$Area2D/AnimatedSprite2D.play("morrer")
-		#SPEED = 0
 	else:
 		$Area2D/AnimatedSprite2D.play("dano")
 

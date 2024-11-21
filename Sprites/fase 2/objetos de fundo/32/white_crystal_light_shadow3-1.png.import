@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyg2pcgp474ms"
-path="res://.godot/imported/background.png-9f4cd22a8d0a6e0bfddf5117492713c1.ctex"
+uid="uid://cssvv6v130qj"
+path="res://.godot/imported/white_crystal_light_shadow3-1.png-c9e35826e76c6b51258c0ca24c40dbf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Boss Final/background.png"
-dest_files=["res://.godot/imported/background.png-9f4cd22a8d0a6e0bfddf5117492713c1.ctex"]
+source_file="res://Sprites/fase 2/objetos de fundo/32/white_crystal_light_shadow3-1.png"
+dest_files=["res://.godot/imported/white_crystal_light_shadow3-1.png-c9e35826e76c6b51258c0ca24c40dbf0.ctex"]
 
 [params]
 
