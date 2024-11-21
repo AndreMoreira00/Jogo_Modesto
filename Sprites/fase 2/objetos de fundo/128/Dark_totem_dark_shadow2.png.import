@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://o3e22ilfb7xa"
+=======
 uid="uid://bhnu41flkb6nd"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/Dark_totem_dark_shadow2.png-086d96c8f7c33cffa6605d86780d55c6.ctex"
 metadata={
 "vram_texture": false

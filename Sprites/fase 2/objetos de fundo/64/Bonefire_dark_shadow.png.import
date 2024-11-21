@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://gvvvjisagb7u"
+=======
 uid="uid://g5hus1w151r2"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/Bonefire_dark_shadow.png-efc115351ecefc2a2e9c866c54c32398.ctex"
 metadata={
 "vram_texture": false

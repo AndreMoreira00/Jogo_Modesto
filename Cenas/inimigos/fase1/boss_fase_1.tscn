@@ -325,7 +325,7 @@ debug_color = Color(2.88785e-07, 0.639647, 0.361632, 0.42)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="boss/Area2D"]
 scale = Vector2(4.5, 4.5)
 sprite_frames = SubResource("SpriteFrames_lg5bq")
-animation = &"dano"
+animation = &"atacar"
 autoplay = "andar"
 
 [node name="HitBox" type="Area2D" parent="boss/Area2D"]

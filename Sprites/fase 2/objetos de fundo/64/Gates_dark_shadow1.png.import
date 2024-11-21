@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://ch4g1aqnajch7"
+=======
 uid="uid://bnpsrop07f7vp"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/Gates_dark_shadow1.png-b5fe809fd6fede25edc9ece0363daba3.ctex"
 metadata={
 "vram_texture": false

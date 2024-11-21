@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://bic4ls2baksms"
+=======
 uid="uid://bej4vl4abo170"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/cocoon_web.png-9c630cc8e5dc4b25ec11c50d295b80e0.ctex"
 metadata={
 "vram_texture": false

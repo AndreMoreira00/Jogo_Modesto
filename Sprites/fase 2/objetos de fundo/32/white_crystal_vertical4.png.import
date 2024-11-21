@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://c1403urqpmf2x"
+=======
 uid="uid://cadu3y5a71j6f"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/white_crystal_vertical4.png-cdc0e785397a240f7090314461e1ee55.ctex"
 metadata={
 "vram_texture": false

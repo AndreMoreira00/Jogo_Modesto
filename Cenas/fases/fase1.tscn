@@ -22,7 +22,15 @@
 [ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="19_fm0xv"]
 [ext_resource type="Texture2D" uid="uid://o8ied4l7xo3q" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Passagem fase para fase 2 - camada superior.png" id="20_cqw52"]
 [ext_resource type="Texture2D" uid="uid://c8psk0fucg7vr" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png" id="20_wdbx6"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cwxyyj6l3ya58" path="res://Cenas/inimigos/fase 3/lobo.tscn" id="23_56k68"]
+=======
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://d4cyfafkbp7a6" path="res://Cenas/inimigos/fase2/boss_fase_2.tscn" id="23_ylpr6"]
+=======
+[ext_resource type="PackedScene" uid="uid://l12dojp5l40u" path="res://Cenas/inimigos/fase2/cobra_fase_2.tscn" id="24_3fcky"]
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
+>>>>>>> 05d00a00705f8642b1313528dc1d268d6a9a3300
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6eg0"]
 size = Vector2(9473.5, 74)
@@ -289,6 +297,17 @@ shape = SubResource("RectangleShape2D_h3tpc")
 position = Vector2(8854, 317)
 shape = SubResource("RectangleShape2D_h3tpc")
 
+<<<<<<< HEAD
 [node name="lobo" parent="." instance=ExtResource("23_56k68")]
 position = Vector2(900, 627)
+=======
+<<<<<<< HEAD
+[node name="boss_fase2" parent="." instance=ExtResource("23_ylpr6")]
+position = Vector2(2013, 616)
+=======
+[node name="cobra_fase2" parent="." instance=ExtResource("24_3fcky")]
+z_index = 2
+position = Vector2(620, 754)
+>>>>>>> 05d00a00705f8642b1313528dc1d268d6a9a3300
 scale = Vector2(2, 2)
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
