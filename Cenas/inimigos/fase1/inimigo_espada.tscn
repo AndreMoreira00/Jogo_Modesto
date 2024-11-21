@@ -147,34 +147,34 @@ size = Vector2(41, 62)
 
 [node name="inimigo_espada" type="Node2D"]
 
-[node name="inimigo_espada" type="CharacterBody2D" parent="."]
+[node name="inimigo" type="CharacterBody2D" parent="."]
 script = ExtResource("3_cse4q")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="inimigo_espada"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="inimigo"]
 visibility_layer = 4
 position = Vector2(0.5, 3.5)
 shape = SubResource("RectangleShape2D_8ro1x")
 
-[node name="Area2D" type="Area2D" parent="inimigo_espada"]
+[node name="Area2D" type="Area2D" parent="inimigo"]
 script = ExtResource("4_ttrnb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo_espada/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D"]
 shape = SubResource("RectangleShape2D_4asn5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo_espada/Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo/Area2D"]
 position = Vector2(0, -29)
 sprite_frames = SubResource("SpriteFrames_oxysk")
 animation = &"morrer"
 autoplay = "andar"
 
-[node name="HitBox" type="Area2D" parent="inimigo_espada/Area2D"]
+[node name="HitBox" type="Area2D" parent="inimigo/Area2D"]
 script = ExtResource("6_6har5")
 
-[node name="HitBox" type="CollisionShape2D" parent="inimigo_espada/Area2D/HitBox"]
+[node name="HitBox" type="CollisionShape2D" parent="inimigo/Area2D/HitBox"]
 position = Vector2(-35.5, 6)
 shape = SubResource("RectangleShape2D_vftq2")
 disabled = true
 
-[connection signal="body_entered" from="inimigo_espada/Area2D" to="inimigo_espada/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="inimigo_espada/Area2D" to="inimigo_espada/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="inimigo_espada/Area2D/HitBox" to="inimigo_espada/Area2D/HitBox" method="_on_body_entered"]
+[connection signal="body_entered" from="inimigo/Area2D" to="inimigo/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="inimigo/Area2D" to="inimigo/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="inimigo/Area2D/HitBox" to="inimigo/Area2D/HitBox" method="_on_body_entered"]
