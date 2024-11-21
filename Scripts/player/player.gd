@@ -130,7 +130,7 @@ func _on_animation_dodge_finished():
 		$".".collision_layer = 1
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "inimigo" or body.name == "boss":
+	if body.name == "inimigo" or body.name == "inimigo_arqueiro" or body.name == "boss":
 		body.dano(DANO)
 
 func dano_player(dano):
@@ -161,7 +161,7 @@ func dano_player(dano):
 				$"Camera2D/vidas/3".play("sumindo")
 			else:
 				$"Camera2D/vidas/3".play("dano")
-				
+	
 func update_stamina_bar():
 	# Envia o valor atualizado para a UI
 	$Camera2D/ProgressBar.value = current_stamina

@@ -1,3 +1,137 @@
-[gd_scene format=3 uid="uid://c8b0yg0j5qp7p"]
+[gd_scene load_steps=14 format=3 uid="uid://c8b0yg0j5qp7p"]
+
+[ext_resource type="Texture2D" uid="uid://cyu2vn8xa7gth" path="res://Sprites/fase 2/background 1/camada inferior.png" id="1_rwrjk"]
+[ext_resource type="Texture2D" uid="uid://o1kea6k71gue" path="res://Sprites/fase 2/background 2/camada inferior.png" id="2_7lkd5"]
+[ext_resource type="Texture2D" uid="uid://qf37iqssui0n" path="res://Sprites/fase 2/background 1/camada superior.png" id="2_gu6xs"]
+[ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="3_jvcxo"]
+[ext_resource type="Texture2D" uid="uid://bw5n064qd4sq3" path="res://Sprites/fase 2/background 4/inferior.png" id="3_lff5s"]
+[ext_resource type="Texture2D" uid="uid://dnuclmg5vnw0d" path="res://Sprites/fase 2/background 3/camada inferiror.png" id="4_gilnx"]
+[ext_resource type="Texture2D" uid="uid://b2fpw1v81348q" path="res://Sprites/fase 2/background 2/camada superior.png" id="6_ta6vq"]
+[ext_resource type="Texture2D" uid="uid://bfmodosvrppxv" path="res://Sprites/fase 2/background 4/camada superior.png" id="7_7tn7l"]
+[ext_resource type="Texture2D" uid="uid://o7ekw8g5l0q7" path="res://Sprites/fase 2/background 3/camada superior.png" id="8_uu5f7"]
+[ext_resource type="Texture2D" uid="uid://0jhp7ebtp6gm" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 2 - 3/Saida fase 2  para fase 3 - camada inferior.png" id="9_rgchu"]
+[ext_resource type="Texture2D" uid="uid://b6qiuqx23vcox" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 2 - 3/Saida fase 2  para fase 3 - camada superior.png" id="10_u1ir0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2i7h"]
+size = Vector2(9597.75, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xith1"]
+size = Vector2(62, 895)
 
 [node name="Fase2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("3_jvcxo")]
+z_index = 1
+position = Vector2(38, 495)
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="1" type="Parallax2D" parent="BG"]
+
+[node name="textura1" type="Sprite2D" parent="BG/1"]
+position = Vector2(577, 326)
+scale = Vector2(0.5, 0.503086)
+texture = ExtResource("1_rwrjk")
+
+[node name="textura2" type="Sprite2D" parent="BG/1"]
+position = Vector2(1729, 326)
+scale = Vector2(0.5, 0.503086)
+texture = ExtResource("1_rwrjk")
+
+[node name="textura3" type="Sprite2D" parent="BG/1"]
+position = Vector2(2881, 326)
+scale = Vector2(0.5, 0.503086)
+texture = ExtResource("1_rwrjk")
+
+[node name="textura4" type="Sprite2D" parent="BG/1"]
+position = Vector2(4033, 326)
+scale = Vector2(0.5, 0.503086)
+texture = ExtResource("2_7lkd5")
+
+[node name="textura5" type="Sprite2D" parent="BG/1"]
+position = Vector2(6334, 326)
+scale = Vector2(0.5, 0.503086)
+texture = ExtResource("3_lff5s")
+
+[node name="textura6" type="Sprite2D" parent="BG/1"]
+position = Vector2(7489, 326)
+scale = Vector2(0.502604, 0.503)
+texture = ExtResource("4_gilnx")
+
+[node name="textura7" type="Sprite2D" parent="BG/1"]
+position = Vector2(5187, 326)
+scale = Vector2(0.5, 0.503086)
+texture = ExtResource("1_rwrjk")
+
+[node name="2" type="Parallax2D" parent="BG"]
+z_index = 5
+
+[node name="textura1" type="Sprite2D" parent="BG/2"]
+position = Vector2(451, 326)
+scale = Vector2(2.4375, 2)
+texture = ExtResource("2_gu6xs")
+
+[node name="textura2" type="Sprite2D" parent="BG/2"]
+position = Vector2(1730, 326)
+scale = Vector2(2, 2)
+texture = ExtResource("2_gu6xs")
+
+[node name="textura3" type="Sprite2D" parent="BG/2"]
+position = Vector2(2881, 326)
+scale = Vector2(2, 2)
+texture = ExtResource("2_gu6xs")
+
+[node name="textura4" type="Sprite2D" parent="BG/2"]
+position = Vector2(4033, 55.5)
+scale = Vector2(2, 3.66975)
+texture = ExtResource("6_ta6vq")
+
+[node name="textura5" type="Sprite2D" parent="BG/2"]
+position = Vector2(6340, -74.0001)
+scale = Vector2(2, 4.48148)
+texture = ExtResource("7_7tn7l")
+
+[node name="textura6" type="Sprite2D" parent="BG/2"]
+position = Vector2(7486, 326)
+scale = Vector2(2, 1.99383)
+texture = ExtResource("8_uu5f7")
+
+[node name="textura7" type="Sprite2D" parent="BG/2"]
+position = Vector2(5187, 326)
+scale = Vector2(2, 2)
+texture = ExtResource("2_gu6xs")
+
+[node name="3" type="Parallax2D" parent="BG"]
+
+[node name="textura1" type="Sprite2D" parent="BG/3"]
+position = Vector2(3021, 327)
+rotation = 3.14159
+scale = Vector2(2, 1.98692)
+texture = ExtResource("2_gu6xs")
+
+[node name="textura2" type="Sprite2D" parent="BG/3"]
+position = Vector2(333, 360.5)
+scale = Vector2(2, 2.16975)
+texture = ExtResource("9_rgchu")
+
+[node name="textura3" type="Sprite2D" parent="BG/3"]
+z_index = 2
+position = Vector2(333, 350)
+scale = Vector2(2, 2)
+texture = ExtResource("10_u1ir0")
+
+[node name="chao" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao"]
+position = Vector2(4677.88, 616)
+shape = SubResource("RectangleShape2D_b2i7h")
+
+[node name="parede" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede"]
+position = Vector2(-95, 362)
+shape = SubResource("RectangleShape2D_xith1")
+
+[node name="Passagem" type="CollisionShape2D" parent="parede"]
+position = Vector2(8837, 294)
+shape = SubResource("RectangleShape2D_xith1")
