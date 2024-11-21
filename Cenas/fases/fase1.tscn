@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="19_fm0xv"]
 [ext_resource type="Texture2D" uid="uid://o8ied4l7xo3q" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Passagem fase para fase 2 - camada superior.png" id="20_cqw52"]
 [ext_resource type="Texture2D" uid="uid://c8psk0fucg7vr" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png" id="20_wdbx6"]
-[ext_resource type="PackedScene" uid="uid://dpf188a12c1f3" path="res://Cenas/inimigos/fase 3/boss_fase_3.tscn" id="23_vygt2"]
+[ext_resource type="PackedScene" uid="uid://d4cyfafkbp7a6" path="res://Cenas/inimigos/fase2/boss_fase_2.tscn" id="23_ylpr6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6eg0"]
 size = Vector2(9473.5, 74)
@@ -289,5 +289,5 @@ shape = SubResource("RectangleShape2D_h3tpc")
 position = Vector2(8854, 317)
 shape = SubResource("RectangleShape2D_h3tpc")
 
-[node name="boss_fase_3" parent="." instance=ExtResource("23_vygt2")]
-position = Vector2(1903, 686)
+[node name="boss_fase2" parent="." instance=ExtResource("23_ylpr6")]
+position = Vector2(2013, 616)
