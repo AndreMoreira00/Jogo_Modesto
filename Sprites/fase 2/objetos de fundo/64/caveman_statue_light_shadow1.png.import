@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dhk5hlg1sayqy"
+=======
+uid="uid://bya7p88jquks2"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/caveman_statue_light_shadow1.png-9e2a6b82d068ca52e577b60f65bccd64.ctex"
 metadata={
 "vram_texture": false

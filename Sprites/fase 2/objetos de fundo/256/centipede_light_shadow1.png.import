@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dvcjfe0al1j5q"
+=======
+uid="uid://cqvbww4ugulxk"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/centipede_light_shadow1.png-36bfabe12698941746b11199c41b4eb9.ctex"
 metadata={
 "vram_texture": false

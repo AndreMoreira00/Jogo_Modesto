@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://nvi3oe1gra1h"
+=======
+uid="uid://1323iv2oboch"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/Human_skeleton_light_shadow.png-2a7547b0ecc9165def1fafe2d7111a2d.ctex"
 metadata={
 "vram_texture": false

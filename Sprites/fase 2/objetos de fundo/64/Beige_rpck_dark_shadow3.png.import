@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dt4d481i1w6a"
+=======
+uid="uid://c1lc7ymiq7fln"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/Beige_rpck_dark_shadow3.png-6ca58ad01e1c4b4f8e48e5c126e35938.ctex"
 metadata={
 "vram_texture": false

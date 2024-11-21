@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bfyusgwmieqpo"
+=======
+uid="uid://ddbmr6riry02n"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/Building1_light_shadow.png-2ab0a1d5d98c7baebce39037e247b4ab.ctex"
 metadata={
 "vram_texture": false

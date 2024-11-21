@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c3u27gkpno3mf"
+=======
+uid="uid://bty8asv1g082w"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
 path="res://.godot/imported/Dinosaur_skeleton_full_light_shadow.png-ab3be8f7032c5058ae672e6fab0f5621.ctex"
 metadata={
 "vram_texture": false
