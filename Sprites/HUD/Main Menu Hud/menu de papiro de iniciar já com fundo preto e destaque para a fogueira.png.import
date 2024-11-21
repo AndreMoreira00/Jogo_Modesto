@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bseqdh48kc42f"
-path="res://.godot/imported/Camada acima do gif e antes dos botões e textos.png-8cf6ac3552e9a7fe5f08012b9b48c886.ctex"
+uid="uid://ctjd8gt716w3c"
+path="res://.godot/imported/menu de papiro de iniciar já com fundo preto e destaque para a fogueira.png-bc00b8bcbcbc32ae382107551044aaf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/HUD/Main Menu Hud/Camada acima do gif e antes dos botões e textos.png"
-dest_files=["res://.godot/imported/Camada acima do gif e antes dos botões e textos.png-8cf6ac3552e9a7fe5f08012b9b48c886.ctex"]
+source_file="res://Sprites/HUD/Main Menu Hud/menu de papiro de iniciar já com fundo preto e destaque para a fogueira.png"
+dest_files=["res://.godot/imported/menu de papiro de iniciar já com fundo preto e destaque para a fogueira.png-bc00b8bcbcbc32ae382107551044aaf5.ctex"]
 
 [params]
 

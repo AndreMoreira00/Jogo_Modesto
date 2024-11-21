@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f3rl60aal082"
-path="res://.godot/imported/Botão Start.png-b57df704506df7c3f49d76f1cb2decce.ctex"
+uid="uid://elnunxhk6jii"
+path="res://.godot/imported/resultado final.png-dfa51c4fe368634df1dd3956dc34b4bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/HUD/Main Menu Hud/Botão Start.png"
-dest_files=["res://.godot/imported/Botão Start.png-b57df704506df7c3f49d76f1cb2decce.ctex"]
+source_file="res://Sprites/HUD/Pause e menu de pause/resultado final.png"
+dest_files=["res://.godot/imported/resultado final.png-dfa51c4fe368634df1dd3956dc34b4bc.ctex"]
 
 [params]
 

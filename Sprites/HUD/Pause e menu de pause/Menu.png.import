@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5372fp2ra64t"
-path="res://.godot/imported/Botão Start pressionado.png-ed4c63f33a7fcac8e2b8653097ff48ef.ctex"
+uid="uid://dwluwamgagkak"
+path="res://.godot/imported/Menu.png-ccbff6b40ba171ef8094324ac736cefc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/HUD/Main Menu Hud/Botão Start pressionado.png"
-dest_files=["res://.godot/imported/Botão Start pressionado.png-ed4c63f33a7fcac8e2b8653097ff48ef.ctex"]
+source_file="res://Sprites/HUD/Pause e menu de pause/Menu.png"
+dest_files=["res://.godot/imported/Menu.png-ccbff6b40ba171ef8094324ac736cefc.ctex"]
 
 [params]
 
