@@ -164,8 +164,10 @@ shape = SubResource("RectangleShape2D_4asn5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo/Area2D"]
 position = Vector2(0, -29)
 sprite_frames = SubResource("SpriteFrames_oxysk")
-animation = &"morrer"
+animation = &"atacar"
 autoplay = "andar"
+frame = 4
+frame_progress = 1.0
 
 [node name="HitBox" type="Area2D" parent="inimigo/Area2D"]
 script = ExtResource("6_6har5")

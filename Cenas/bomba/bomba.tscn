@@ -1,39 +1,45 @@
-[gd_scene load_steps=36 format=3 uid="uid://chw5hq6jdp4wt"]
+[gd_scene load_steps=39 format=3 uid="uid://chw5hq6jdp4wt"]
 
-[ext_resource type="Texture2D" uid="uid://ddgnlwyophfdb" path="res://Sprites/Boss Final/boss/Explosão quando morto/0.png" id="1_bso65"]
-[ext_resource type="Texture2D" uid="uid://c8cdqx72i28ca" path="res://Sprites/Boss Final/boss/Explosão quando morto/1.png" id="2_g2oks"]
-[ext_resource type="Texture2D" uid="uid://b1a83ihcmd0p3" path="res://Sprites/Boss Final/boss/Explosão quando morto/3.png" id="3_7prxe"]
-[ext_resource type="Texture2D" uid="uid://e00iktughbkf" path="res://Sprites/Boss Final/boss/Explosão quando morto/4.png" id="4_cl0k3"]
-[ext_resource type="Texture2D" uid="uid://k7nb4tkd4wuj" path="res://Sprites/Boss Final/boss/Explosão quando morto/5.png" id="5_n0w18"]
-[ext_resource type="Texture2D" uid="uid://didhqf4pxl2we" path="res://Sprites/Boss Final/boss/Explosão quando morto/6.png" id="6_1be40"]
-[ext_resource type="Texture2D" uid="uid://cu3ae1164txqa" path="res://Sprites/Boss Final/boss/Explosão quando morto/7.png" id="7_mbuft"]
-[ext_resource type="Texture2D" uid="uid://fd7o83j5i3lx" path="res://Sprites/Boss Final/boss/Explosão quando morto/8.png" id="8_8voil"]
-[ext_resource type="Texture2D" uid="uid://dxca88r8n07rx" path="res://Sprites/Boss Final/boss/Explosão quando morto/9.png" id="9_ehpwu"]
-[ext_resource type="Texture2D" uid="uid://dqsyq3xk4rvj6" path="res://Sprites/Boss Final/boss/Explosão quando morto/10.png" id="10_6d365"]
-[ext_resource type="Texture2D" uid="uid://b3qyvok4jesq0" path="res://Sprites/Boss Final/boss/Explosão quando morto/11.png" id="11_f301k"]
-[ext_resource type="Texture2D" uid="uid://sn8s7ttxthye" path="res://Sprites/Boss Final/boss/Explosão quando morto/12.png" id="12_erfjq"]
-[ext_resource type="Texture2D" uid="uid://baweyb453ri1t" path="res://Sprites/Boss Final/boss/Explosão quando morto/13.png" id="13_u3m08"]
-[ext_resource type="Texture2D" uid="uid://bw5lbg6y3j2v2" path="res://Sprites/Boss Final/boss/Explosão quando morto/14.png" id="14_wcpjc"]
-[ext_resource type="Texture2D" uid="uid://c3tyshxeko7ea" path="res://Sprites/Boss Final/boss/Explosão quando morto/15.png" id="15_mtl8g"]
-[ext_resource type="Texture2D" uid="uid://b7lcxbt4fjdbn" path="res://Sprites/Boss Final/boss/Explosão quando morto/16.png" id="16_pjb2h"]
-[ext_resource type="Texture2D" uid="uid://c1bj5577on7ee" path="res://Sprites/Boss Final/boss/Explosão quando morto/17.png" id="17_nti4p"]
-[ext_resource type="Texture2D" uid="uid://c1ut2ywtggmcn" path="res://Sprites/Boss Final/boss/Explosão quando morto/18.png" id="18_gc8a2"]
-[ext_resource type="Texture2D" uid="uid://0dgyhxjtutey" path="res://Sprites/Boss Final/boss/Explosão quando morto/19.png" id="19_26tmy"]
-[ext_resource type="Texture2D" uid="uid://pxoxg113mbf5" path="res://Sprites/Boss Final/boss/Explosão quando morto/20.png" id="20_wsemq"]
-[ext_resource type="Texture2D" uid="uid://v4lafb0qxkkh" path="res://Sprites/Boss Final/boss/Explosão quando morto/21.png" id="21_fdmnh"]
-[ext_resource type="Texture2D" uid="uid://dnyofxdl0e2ek" path="res://Sprites/Boss Final/boss/Explosão quando morto/22.png" id="22_clv30"]
-[ext_resource type="Texture2D" uid="uid://dl5taagxdxedc" path="res://Sprites/Boss Final/boss/Explosão quando morto/23.png" id="23_to5ci"]
-[ext_resource type="Texture2D" uid="uid://2q36en6vyr5c" path="res://Sprites/Boss Final/boss/Explosão quando morto/24.png" id="24_1g6d4"]
-[ext_resource type="Texture2D" uid="uid://kk2mpad06tgn" path="res://Sprites/Boss Final/boss/Explosão quando morto/25.png" id="25_xk7el"]
-[ext_resource type="Texture2D" uid="uid://ba4tt8bwhb5ne" path="res://Sprites/Boss Final/boss/Explosão quando morto/26.png" id="26_l2aec"]
-[ext_resource type="Texture2D" uid="uid://dvmwffentc1ud" path="res://Sprites/Boss Final/boss/Explosão quando morto/27.png" id="27_s62t5"]
-[ext_resource type="Texture2D" uid="uid://3mgmxxw0bw8c" path="res://Sprites/Boss Final/boss/Explosão quando morto/28.png" id="28_oy8hh"]
-[ext_resource type="Texture2D" uid="uid://b14edmh1wvo5s" path="res://Sprites/Boss Final/boss/Explosão quando morto/29.png" id="29_gy6bk"]
-[ext_resource type="Texture2D" uid="uid://cfqwaycj40nil" path="res://Sprites/Boss Final/boss/Explosão quando morto/30.png" id="30_c3mld"]
-[ext_resource type="Texture2D" uid="uid://fkcrcxhgfja6" path="res://Sprites/Boss Final/boss/Explosão quando morto/31.png" id="31_ttfp1"]
-[ext_resource type="Texture2D" uid="uid://f3ha3umjmwlv" path="res://Sprites/Boss Final/boss/Explosão quando morto/32.png" id="32_h7qol"]
-[ext_resource type="Texture2D" uid="uid://drwsllbrbtp3u" path="res://Sprites/Boss Final/boss/Explosão quando morto/33.png" id="33_o582f"]
-[ext_resource type="Texture2D" uid="uid://kurdtyofsjly" path="res://Sprites/Boss Final/boss/Explosão quando morto/34.png" id="34_qy0nr"]
+[ext_resource type="Texture2D" uid="uid://mewxshsi4ru0" path="res://Sprites/Boss Final/boss/Explosão quando morto/0.png" id="1_bso65"]
+[ext_resource type="Script" path="res://Scripts/bomba/bomba.gd" id="1_buu5c"]
+[ext_resource type="Texture2D" uid="uid://dahl0xsjo0li7" path="res://Sprites/Boss Final/boss/Explosão quando morto/1.png" id="2_g2oks"]
+[ext_resource type="Texture2D" uid="uid://bo5wrrq71mktb" path="res://Sprites/Boss Final/boss/Explosão quando morto/3.png" id="3_7prxe"]
+[ext_resource type="Texture2D" uid="uid://dwi3p1g62lyfy" path="res://Sprites/Boss Final/boss/Explosão quando morto/4.png" id="4_cl0k3"]
+[ext_resource type="Texture2D" uid="uid://c65qqovuliimg" path="res://Sprites/Boss Final/boss/Explosão quando morto/5.png" id="5_n0w18"]
+[ext_resource type="Texture2D" uid="uid://c6pk2cclh2ra" path="res://Sprites/Boss Final/boss/Explosão quando morto/6.png" id="6_1be40"]
+[ext_resource type="Texture2D" uid="uid://bgp41h3e12ens" path="res://Sprites/Boss Final/boss/Explosão quando morto/7.png" id="7_mbuft"]
+[ext_resource type="Texture2D" uid="uid://cskub8lvp1nxd" path="res://Sprites/Boss Final/boss/Explosão quando morto/8.png" id="8_8voil"]
+[ext_resource type="Texture2D" uid="uid://dqqrc2u48d1a8" path="res://Sprites/Boss Final/boss/Explosão quando morto/9.png" id="9_ehpwu"]
+[ext_resource type="Texture2D" uid="uid://dc7g2i10k75i2" path="res://Sprites/Boss Final/boss/Explosão quando morto/10.png" id="10_6d365"]
+[ext_resource type="Texture2D" uid="uid://d2160vc5bjoqf" path="res://Sprites/Boss Final/boss/Explosão quando morto/11.png" id="11_f301k"]
+[ext_resource type="Texture2D" uid="uid://dfvhdoho7ursp" path="res://Sprites/Boss Final/boss/Explosão quando morto/12.png" id="12_erfjq"]
+[ext_resource type="Texture2D" uid="uid://1hnk47mn6t8a" path="res://Sprites/Boss Final/boss/Explosão quando morto/13.png" id="13_u3m08"]
+[ext_resource type="Texture2D" uid="uid://bjhw4l1vv5tt5" path="res://Sprites/Boss Final/boss/Explosão quando morto/14.png" id="14_wcpjc"]
+[ext_resource type="Texture2D" uid="uid://diwxdr8tq2htn" path="res://Sprites/Boss Final/boss/Explosão quando morto/15.png" id="15_mtl8g"]
+[ext_resource type="Texture2D" uid="uid://dplerfu3vngva" path="res://Sprites/Boss Final/boss/Explosão quando morto/16.png" id="16_pjb2h"]
+[ext_resource type="Texture2D" uid="uid://boky7tgbrtp04" path="res://Sprites/Boss Final/boss/Explosão quando morto/17.png" id="17_nti4p"]
+[ext_resource type="Texture2D" uid="uid://c8ifqm648h4h5" path="res://Sprites/Boss Final/boss/Explosão quando morto/18.png" id="18_gc8a2"]
+[ext_resource type="Texture2D" uid="uid://c1p33qqx5ktq0" path="res://Sprites/Boss Final/boss/Explosão quando morto/19.png" id="19_26tmy"]
+[ext_resource type="Texture2D" uid="uid://c7q7evdimj1wc" path="res://Sprites/Boss Final/boss/Explosão quando morto/20.png" id="20_wsemq"]
+[ext_resource type="Texture2D" uid="uid://cdc6pvtk8u5br" path="res://Sprites/Boss Final/boss/Explosão quando morto/21.png" id="21_fdmnh"]
+[ext_resource type="Texture2D" uid="uid://bpiycwo30adpe" path="res://Sprites/Boss Final/boss/Explosão quando morto/22.png" id="22_clv30"]
+[ext_resource type="Texture2D" uid="uid://2yl7ei72cv74" path="res://Sprites/Boss Final/boss/Explosão quando morto/23.png" id="23_to5ci"]
+[ext_resource type="Texture2D" uid="uid://btqholvsq1e8q" path="res://Sprites/Boss Final/boss/Explosão quando morto/24.png" id="24_1g6d4"]
+[ext_resource type="Texture2D" uid="uid://dl40uuvxlgsyo" path="res://Sprites/Boss Final/boss/Explosão quando morto/25.png" id="25_xk7el"]
+[ext_resource type="Texture2D" uid="uid://iq4mmqyhvhtt" path="res://Sprites/Boss Final/boss/Explosão quando morto/26.png" id="26_l2aec"]
+[ext_resource type="Texture2D" uid="uid://csxqii4lr0jel" path="res://Sprites/Boss Final/boss/Explosão quando morto/27.png" id="27_s62t5"]
+[ext_resource type="Texture2D" uid="uid://bo7g1wiisfoef" path="res://Sprites/Boss Final/boss/Explosão quando morto/28.png" id="28_oy8hh"]
+[ext_resource type="Texture2D" uid="uid://mr7pxvxp8h3" path="res://Sprites/Boss Final/boss/Explosão quando morto/29.png" id="29_gy6bk"]
+[ext_resource type="Texture2D" uid="uid://cuasswwfn78p8" path="res://Sprites/Boss Final/boss/Explosão quando morto/30.png" id="30_c3mld"]
+[ext_resource type="Texture2D" uid="uid://bpqdcuxy0thwn" path="res://Sprites/Boss Final/boss/Explosão quando morto/31.png" id="31_ttfp1"]
+[ext_resource type="Texture2D" uid="uid://bvndfs7o8b63n" path="res://Sprites/Boss Final/boss/Explosão quando morto/32.png" id="32_h7qol"]
+[ext_resource type="Texture2D" uid="uid://bn3l3m4h8gj6j" path="res://Sprites/Boss Final/boss/Explosão quando morto/33.png" id="33_o582f"]
+[ext_resource type="Texture2D" uid="uid://l7cg153ogom6" path="res://Sprites/Boss Final/boss/Explosão quando morto/34.png" id="34_qy0nr"]
+[ext_resource type="Texture2D" uid="uid://c5a0tilt7vo3i" path="res://Sprites/fase 1/INIMIGOS/BOSS/Skeleton boss.png" id="36_fk4st"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iihsi"]
+atlas = ExtResource("36_fk4st")
+region = Rect2(312, 240, 104, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m5rno"]
 animations = [{
@@ -139,15 +145,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("34_qy0nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iihsi")
 }],
 "loop": false,
-"name": &"default",
-"speed": 8.0
+"name": &"bomba",
+"speed": 5.0
 }]
 
 [node name="bomba" type="Node2D"]
+script = ExtResource("1_buu5c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 100)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_m5rno")
-frame = 32
-frame_progress = 1.0
+animation = &"bomba"
+autoplay = "bomba"

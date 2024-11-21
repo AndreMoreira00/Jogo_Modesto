@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		if player.global_position.x-150 <= global_position.x:
 			$AnimatedSprite2D.scale.x = -3  
 			
-	if is_attacking:
+	if is_attacking and $AnimatedSprite2D.animation != "morrer":
 		is_attacking = false
 		$AnimatedSprite2D.play("atacar")
 		attack_timer.start()
@@ -42,8 +42,8 @@ func _on_body_entered(body: Node2D) -> void:
 		is_attacking = true
 
 func _on_body_exited(body: Node2D) -> void:
+	exit = true
 	if body == player:
-		exit = true
 		player = null
 		is_attacking = false
 

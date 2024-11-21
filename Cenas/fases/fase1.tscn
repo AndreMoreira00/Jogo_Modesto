@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://q4pv7i3j77bw"]
+[gd_scene load_steps=27 format=3 uid="uid://q4pv7i3j77bw"]
 
 [ext_resource type="PackedScene" uid="uid://8ahga7ag21xq" path="res://Cenas/player/pocao.tscn" id="1_tqrnt"]
 [ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="1_vxj0m"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="19_fm0xv"]
 [ext_resource type="Texture2D" uid="uid://o8ied4l7xo3q" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Passagem fase para fase 2 - camada superior.png" id="20_cqw52"]
 [ext_resource type="Texture2D" uid="uid://c8psk0fucg7vr" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png" id="20_wdbx6"]
+[ext_resource type="PackedScene" uid="uid://cchwp1m6yunc5" path="res://Cenas/inimigos/fase 4/boss_fase_4.tscn" id="24_0mehm"]
 [ext_resource type="Script" path="res://Cenas/fases/passagem.gd" id="24_8gggb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6eg0"]
@@ -39,7 +40,7 @@ position = Vector2(1470, 698)
 scale = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("1_vxj0m")]
-position = Vector2(6947, 627)
+position = Vector2(67.0001, 635)
 scale = Vector2(2.5, 2.5)
 
 [node name="BG" type="Node2D" parent="."]
@@ -291,5 +292,8 @@ script = ExtResource("24_8gggb")
 [node name="Passagem" type="CollisionShape2D" parent="Passagem"]
 position = Vector2(8854, 317)
 shape = SubResource("RectangleShape2D_h3tpc")
+
+[node name="boss_fase_4" parent="." instance=ExtResource("24_0mehm")]
+position = Vector2(905, 625)
 
 [connection signal="body_entered" from="Passagem" to="Passagem" method="_on_body_entered"]

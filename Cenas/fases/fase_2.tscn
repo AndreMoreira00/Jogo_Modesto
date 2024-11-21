@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8b0yg0j5qp7p"]
+[gd_scene load_steps=15 format=3 uid="uid://c8b0yg0j5qp7p"]
 
 [ext_resource type="Texture2D" uid="uid://cyu2vn8xa7gth" path="res://Sprites/fase 2/background 1/camada inferior.png" id="1_rwrjk"]
 [ext_resource type="Texture2D" uid="uid://o1kea6k71gue" path="res://Sprites/fase 2/background 2/camada inferior.png" id="2_7lkd5"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://o7ekw8g5l0q7" path="res://Sprites/fase 2/background 3/camada superior.png" id="8_uu5f7"]
 [ext_resource type="Texture2D" uid="uid://0jhp7ebtp6gm" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 2 - 3/Saida fase 2  para fase 3 - camada inferior.png" id="9_rgchu"]
 [ext_resource type="Texture2D" uid="uid://b6qiuqx23vcox" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 2 - 3/Saida fase 2  para fase 3 - camada superior.png" id="10_u1ir0"]
+[ext_resource type="PackedScene" uid="uid://d4cyfafkbp7a6" path="res://Cenas/inimigos/fase2/boss_fase_2.tscn" id="12_ud8pu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2i7h"]
 size = Vector2(9597.75, 74)
@@ -22,7 +23,7 @@ size = Vector2(62, 895)
 
 [node name="Player" parent="." instance=ExtResource("3_jvcxo")]
 z_index = 1
-position = Vector2(38, 495)
+position = Vector2(7155, 484)
 
 [node name="BG" type="Node2D" parent="."]
 
@@ -135,3 +136,6 @@ shape = SubResource("RectangleShape2D_xith1")
 [node name="Passagem" type="CollisionShape2D" parent="parede"]
 position = Vector2(8837, 294)
 shape = SubResource("RectangleShape2D_xith1")
+
+[node name="boss_fase2" parent="." instance=ExtResource("12_ud8pu")]
+position = Vector2(7890, 460)
