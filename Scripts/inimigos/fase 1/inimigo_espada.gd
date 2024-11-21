@@ -38,6 +38,7 @@ func dano(DANO):
 		is_dead = true
 		$Area2D/AnimatedSprite2D.play("morrer")
 		SPEED = 0
+		
 
 func _on_animation_finished():
 	if $Area2D/AnimatedSprite2D.animation == "morrer":

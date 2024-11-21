@@ -228,33 +228,33 @@ animations = [{
 
 [node name="inimigo_arqueiro" type="Node2D"]
 
-[node name="inimigo_arqueiro" type="CharacterBody2D" parent="."]
+[node name="inimigo" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0ft0c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo_arqueiro"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo"]
 position = Vector2(133, 65)
 shape = SubResource("RectangleShape2D_d2tvx")
 
-[node name="Area2D" type="Area2D" parent="inimigo_arqueiro"]
+[node name="Area2D" type="Area2D" parent="inimigo"]
 script = ExtResource("2_rh3ya")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo_arqueiro/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D"]
 position = Vector2(131, -14)
 shape = SubResource("RectangleShape2D_8iyma")
 debug_color = Color(0, 0.6, 0, 0.419608)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo_arqueiro/Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo/Area2D"]
 position = Vector2(129, 35)
 sprite_frames = SubResource("SpriteFrames_8y12f")
 animation = &"atacar"
 autoplay = "andar"
 
-[node name="posicao_flecha" type="Marker2D" parent="inimigo_arqueiro/Area2D"]
+[node name="posicao_flecha" type="Marker2D" parent="inimigo/Area2D"]
 position = Vector2(105, 51)
 
-[node name="flecha_cooldown" type="Timer" parent="inimigo_arqueiro/Area2D"]
+[node name="flecha_cooldown" type="Timer" parent="inimigo/Area2D"]
 wait_time = 2.0
 one_shot = true
 
-[connection signal="body_entered" from="inimigo_arqueiro/Area2D" to="inimigo_arqueiro/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="inimigo_arqueiro/Area2D" to="inimigo_arqueiro/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="inimigo/Area2D" to="inimigo/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="inimigo/Area2D" to="inimigo/Area2D" method="_on_body_exited"]

@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://djdvbqqcq0mj3"
+=======
+uid="uid://bw77rgimderh0"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
+path="res://.godot/imported/Dinosaur_skeleton_part1_dark_shadow.png-b32d94d01baea3c30655a61b2f2528d1.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Sprites/fase 2/objetos de fundo/128/Dinosaur_skeleton_part1_dark_shadow.png"
+dest_files=["res://.godot/imported/Dinosaur_skeleton_part1_dark_shadow.png-b32d94d01baea3c30655a61b2f2528d1.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

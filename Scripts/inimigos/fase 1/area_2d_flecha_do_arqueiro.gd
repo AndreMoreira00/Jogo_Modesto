@@ -3,7 +3,7 @@ extends Area2D
 var flecha_speed := 300.0
 var direction := -1
 
-var dano = 1
+var dano = 0.5
 
 func _process(delta: float) -> void:
 	position.x += flecha_speed * direction * delta

@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://qogs81a51i22"
+=======
+uid="uid://ba4tt8bwhb5ne"
+>>>>>>> b00ad107d38a0ce1ac9d168d61a5c51584030429
+path="res://.godot/imported/26.png-7ae66634886182239a2d431da186cd69.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Sprites/Boss Final/boss/Explosão quando morto/26.png"
+dest_files=["res://.godot/imported/26.png-7ae66634886182239a2d431da186cd69.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
