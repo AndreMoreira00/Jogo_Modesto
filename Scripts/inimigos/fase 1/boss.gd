@@ -7,7 +7,7 @@ var RIGHT_DISTANCE = 3 * SPEED
 var move_direction = -1
 var distance_traveled = 0.0  
 
-var vida = 3
+var vida = 10.0
 var is_dead = false
 
 func _ready():

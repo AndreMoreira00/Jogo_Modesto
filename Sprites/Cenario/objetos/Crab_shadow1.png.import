@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blkoo8wb5db0b"
-path="res://.godot/imported/Seabed_ objects.png-54e87bae8b016c7bd4344e5bb1b68e13.ctex"
+uid="uid://4scslcboyrha"
+path="res://.godot/imported/Crab_shadow1.png-19648f78e065cb78ccf690bb0484626d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenario/objetos/Seabed_ objects.png"
-dest_files=["res://.godot/imported/Seabed_ objects.png-54e87bae8b016c7bd4344e5bb1b68e13.ctex"]
+source_file="res://Sprites/Cenario/objetos/Crab_shadow1.png"
+dest_files=["res://.godot/imported/Crab_shadow1.png-19648f78e065cb78ccf690bb0484626d.ctex"]
 
 [params]
 

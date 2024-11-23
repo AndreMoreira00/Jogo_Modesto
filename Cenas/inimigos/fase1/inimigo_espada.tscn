@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/inimigos/fase 1/hit_box_inimigo_espada.gd" id="6_6har5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ro1x"]
-size = Vector2(35, 69)
+size = Vector2(35, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4asn5"]
 size = Vector2(170, 74)
@@ -152,7 +152,7 @@ script = ExtResource("3_cse4q")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="inimigo"]
 visibility_layer = 4
-position = Vector2(0.5, 3.5)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_8ro1x")
 
 [node name="Area2D" type="Area2D" parent="inimigo"]
@@ -173,7 +173,7 @@ frame_progress = 1.0
 script = ExtResource("6_6har5")
 
 [node name="HitBox" type="CollisionShape2D" parent="inimigo/Area2D/HitBox"]
-position = Vector2(-35.5, 6)
+position = Vector2(-40, 6)
 shape = SubResource("RectangleShape2D_vftq2")
 disabled = true
 

@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 	if current_stamina > 0:
 		# Lógica de ataque
 		if Input.is_action_just_pressed("ataque_fraco") and not is_attacking and current_stamina >= 40:
-			DANO = 1
+			DANO = 1.0
 			is_attacking = true
 			$Area2D/HitBox.set_deferred("disabled", false)
 			$AnimatedSprite2D.play("atacando_fraco")
@@ -67,7 +67,7 @@ func _physics_process(delta: float) -> void:
 			current_stamina -= 40 
 		
 		if Input.is_action_just_pressed("ataque_forte") and not is_attacking and current_stamina >= 60:
-			DANO = 3
+			DANO = 2.0
 			is_attacking = true
 			$Area2D/HitBox.set_deferred("disabled", false)
 			$AnimatedSprite2D.play("atacando_forte")
@@ -75,11 +75,11 @@ func _physics_process(delta: float) -> void:
 			$Camera2D/Parallax2D/ataque.visible = true
 			current_stamina -= 60 
 		
-		if Input.is_action_just_pressed("esquiva") and not is_dodge and current_stamina >= 70:
+		if Input.is_action_just_pressed("esquiva") and not is_dodge and current_stamina >= 50 and is_attacking == false:
 			is_dodge = true
 			$AnimatedSprite2D.play("esquiva")
-			$".".collision_layer = 8
-			current_stamina -= 70 
+			$".".collision_layer = 100
+			current_stamina -= 50 
 	
 	
 # Troca a animação do player
@@ -185,4 +185,4 @@ func coletar_pocao():
 			$"Camera2D/vidas/3".play("full")
 		3.0:
 			$"Camera2D/vidas/3".play("full")
-	vida += 1
+	vida += 1.0

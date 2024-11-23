@@ -482,6 +482,7 @@ size = Vector2(44, 37.25)
 scale = Vector2(2, 2)
 
 [node name="player" type="CharacterBody2D" parent="."]
+z_index = 1
 script = ExtResource("1_wo7wn")
 
 [node name="Camera2D" type="Camera2D" parent="player"]

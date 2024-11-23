@@ -201,9 +201,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3jft7")
 }],
-"loop": true,
+"loop": false,
 "name": &"atacar",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -253,7 +253,6 @@ autoplay = "andar"
 position = Vector2(105, 51)
 
 [node name="flecha_cooldown" type="Timer" parent="inimigo/Area2D"]
-wait_time = 2.0
 one_shot = true
 
 [connection signal="body_entered" from="inimigo/Area2D" to="inimigo/Area2D" method="_on_body_entered"]

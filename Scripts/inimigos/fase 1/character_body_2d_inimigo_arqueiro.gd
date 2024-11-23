@@ -7,7 +7,7 @@ var RIGHT_DISTANCE = 3 * SPEED
 var move_direction = -1 
 var distance_traveled = 0.0  
 
-var vida: int = 3
+var vida: int = 3.0
 var is_dead = false
 
 func _ready():
@@ -34,7 +34,7 @@ func patrol(delta: float) -> void:
 
 func dano(DANO):
 	vida-=DANO
-	if vida<= 0:
+	if vida<= 0.0:
 		is_dead = true
 		$Area2D/AnimatedSprite2D.play("morrer")
 		SPEED = 0
