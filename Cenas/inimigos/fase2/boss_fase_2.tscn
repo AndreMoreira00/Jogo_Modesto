@@ -265,7 +265,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf1uc"]
-size = Vector2(456.5, 184.5)
+size = Vector2(213, 184.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy0hl"]
 size = Vector2(78, 133)
@@ -291,7 +291,7 @@ animation = &"andar"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss/Area2D"]
-position = Vector2(1.25, 18)
+position = Vector2(-28.5, 18)
 shape = SubResource("RectangleShape2D_gf1uc")
 debug_color = Color(0.156309, 0.631539, 0.380729, 0.42)
 

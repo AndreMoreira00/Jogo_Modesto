@@ -11,7 +11,6 @@ var vida = 3
 var is_dead = false
 
 func _ready():
-	# Conectando o sinal de fim de animação ao método
 	$Area2D/AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_finished"))
 
 func _process(delta: float) -> void:

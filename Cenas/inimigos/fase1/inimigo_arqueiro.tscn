@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bmabcqvug4xap" path="res://Sprites/fase 1/INIMIGOS/COMUM/arco/Dead.png" id="5_8nh6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2tvx"]
-size = Vector2(31, 72)
+size = Vector2(39, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8iyma"]
-size = Vector2(545, 237.5)
+size = Vector2(551.5, 237.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wg1fl"]
 atlas = ExtResource("3_832jg")
@@ -201,7 +201,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3jft7")
 }],
-"loop": false,
+"loop": true,
 "name": &"atacar",
 "speed": 8.0
 }, {
@@ -232,14 +232,14 @@ animations = [{
 script = ExtResource("1_0ft0c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo"]
-position = Vector2(133, 65)
+position = Vector2(133.5, 65)
 shape = SubResource("RectangleShape2D_d2tvx")
 
 [node name="Area2D" type="Area2D" parent="inimigo"]
 script = ExtResource("2_rh3ya")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D"]
-position = Vector2(131, -14)
+position = Vector2(134.25, -14)
 shape = SubResource("RectangleShape2D_8iyma")
 debug_color = Color(0, 0.6, 0, 0.419608)
 

@@ -9,20 +9,20 @@ const flecha_scene = preload("res://Cenas/inimigos/fase1/flecha.tscn")
 
 func _process(delta: float) -> void:
 	if player:
-		# Compara a posição para virar o personagem corretamente
+		
 		if player.global_position.x-270 <= global_position.x:
-			$AnimatedSprite2D.scale.x = 1  # Vira para a esquerda
+			$AnimatedSprite2D.scale.x = 1
 			if sign(posicao_flecha.position.x) == 1:
 				posicao_flecha.position.x *= -1
 		elif player.global_position.x-270 >= global_position.x:
-			$AnimatedSprite2D.scale.x = -1  # Vira para a direita
+			$AnimatedSprite2D.scale.x = -1  
 			if sign(posicao_flecha.position.x) == -1:
 				posicao_flecha.position.x *= -1
 		
-		if flecha_cooldown.is_stopped() and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 12:			
+		if flecha_cooldown.is_stopped() and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 12:
 			shoot_flecha()
 		
-	if $AnimatedSprite2D.animation != "morrer" and exit and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 14:
+	if $AnimatedSprite2D.animation != "morrer" and exit and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 13:
 		$AnimatedSprite2D.play("andar")
 			
 # Função chamada ao detectar uma entrada de colisão

@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="19_fm0xv"]
 [ext_resource type="Texture2D" uid="uid://o8ied4l7xo3q" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Passagem fase para fase 2 - camada superior.png" id="20_cqw52"]
 [ext_resource type="Texture2D" uid="uid://c8psk0fucg7vr" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png" id="20_wdbx6"]
-[ext_resource type="Script" path="res://Cenas/fases/passagem.gd" id="24_8gggb"]
+[ext_resource type="Script" path="res://Cenas/fases/passagem1-2.gd" id="24_8gggb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6eg0"]
 size = Vector2(9342.75, 74)
@@ -35,7 +35,7 @@ size = Vector2(9342.75, 74)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h3tpc"]
 size = Vector2(62, 895)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kbhqx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7fcg"]
 texture = ExtResource("19_eydkw")
 26:0/0 = 0
 27:0/0 = 0
@@ -1347,13 +1347,13 @@ texture = ExtResource("19_eydkw")
 56:61/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_vuux4"]
-sources/0 = SubResource("TileSetAtlasSource_kbhqx")
+sources/0 = SubResource("TileSetAtlasSource_j7fcg")
 
 [node name="Fase1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_vxj0m")]
 z_index = 1
-position = Vector2(5568, 643)
+position = Vector2(59.0002, 643)
 scale = Vector2(2.5, 2.5)
 
 [node name="Inimigos" type="Node2D" parent="."]
@@ -1417,8 +1417,8 @@ shape = SubResource("RectangleShape2D_h3tpc")
 
 [node name="BG" type="Node2D" parent="."]
 z_index = -3
-metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="areia" type="Parallax2D" parent="BG"]
 scale = Vector2(2, 2)

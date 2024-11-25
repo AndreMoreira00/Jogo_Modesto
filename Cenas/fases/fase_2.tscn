@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8b0yg0j5qp7p"]
+[gd_scene load_steps=33 format=3 uid="uid://c8b0yg0j5qp7p"]
 
 [ext_resource type="Texture2D" uid="uid://cyu2vn8xa7gth" path="res://Sprites/fase 2/background 1/camada inferior.png" id="1_rwrjk"]
 [ext_resource type="Texture2D" uid="uid://o1kea6k71gue" path="res://Sprites/fase 2/background 2/camada inferior.png" id="2_7lkd5"]
@@ -11,7 +11,38 @@
 [ext_resource type="Texture2D" uid="uid://o7ekw8g5l0q7" path="res://Sprites/fase 2/background 3/camada superior.png" id="8_uu5f7"]
 [ext_resource type="Texture2D" uid="uid://0jhp7ebtp6gm" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 2 - 3/Saida fase 2  para fase 3 - camada inferior.png" id="9_rgchu"]
 [ext_resource type="Texture2D" uid="uid://b6qiuqx23vcox" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 2 - 3/Saida fase 2  para fase 3 - camada superior.png" id="10_u1ir0"]
+[ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="11_8xugt"]
+[ext_resource type="Texture2D" uid="uid://wyumnwj26b6i" path="res://Sprites/fase 2/background 1/chão real oficial.png" id="11_t57wp"]
+[ext_resource type="Texture2D" uid="uid://bp42nres6kkp0" path="res://Sprites/fase 2/objetos de fundo/256/Dinosaur_skeleton_full_light_shadow.png" id="12_52l4i"]
 [ext_resource type="PackedScene" uid="uid://d4cyfafkbp7a6" path="res://Cenas/inimigos/fase2/boss_fase_2.tscn" id="12_ud8pu"]
+[ext_resource type="Texture2D" uid="uid://c1g01e5g67t3e" path="res://Sprites/fase 2/objetos de fundo/256/centipede_light_shadow2.png" id="13_fl0xr"]
+[ext_resource type="Texture2D" uid="uid://dnapime2eb83m" path="res://Sprites/fase 2/objetos de fundo/128/mushroom2_light_shadow1.png" id="15_wje56"]
+[ext_resource type="Texture2D" uid="uid://b82aaujjwnj3l" path="res://Sprites/fase 2/objetos de fundo/128/magic_circle_dark_shadow.png" id="16_npe68"]
+[ext_resource type="Texture2D" uid="uid://d3088jnltbbe7" path="res://Sprites/fase 2/objetos de fundo/128/magic_circle_light_shadow.png" id="17_rqjgg"]
+[ext_resource type="Texture2D" uid="uid://dr0fdkf31x82l" path="res://Sprites/fase 2/objetos de fundo/128/Dinosaur_skeleton_part2_light_shadow.png" id="18_n46uc"]
+[ext_resource type="Texture2D" uid="uid://172115iasgrr" path="res://Sprites/fase 2/objetos de fundo/128/Demon_scull_light_shadow.png" id="19_5l2cn"]
+[ext_resource type="Texture2D" uid="uid://27pwwgqsjf0m" path="res://Sprites/fase 2/objetos de fundo/128/cocoon_web.png" id="20_88khk"]
+[ext_resource type="Texture2D" uid="uid://81pvkuvtg261" path="res://Sprites/fase 2/objetos de fundo/128/Beige_rpck_light_shadow1.png" id="21_w48ij"]
+[ext_resource type="Texture2D" uid="uid://bp5u5h7uakqdx" path="res://Sprites/fase 2/objetos de fundo/64/mushroom4_light_shadow2.png" id="22_1r8lj"]
+[ext_resource type="Texture2D" uid="uid://db3eis50on630" path="res://Sprites/fase 2/objetos de fundo/64/Dinosaur_skeleton__light_dark_shadow.png" id="23_sa0xh"]
+[ext_resource type="Script" path="res://Cenas/fases/passagem2-3.gd" id="24_u5nt3"]
+[ext_resource type="PackedScene" uid="uid://dmpbk0qs1wwe0" path="res://Cenas/inimigos/fase2/cobra_fase_2.tscn" id="25_owb7e"]
+[ext_resource type="PackedScene" uid="uid://cj4c053ermgux" path="res://Cenas/inimigos/fase1/inimigo_arqueiro.tscn" id="26_kdks0"]
+[ext_resource type="PackedScene" uid="uid://8ahga7ag21xq" path="res://Cenas/player/pocao.tscn" id="28_4raod"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5opwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_npe68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rqjgg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2i7h"]
 size = Vector2(9597.75, 74)
@@ -20,10 +51,6 @@ size = Vector2(9597.75, 74)
 size = Vector2(62, 895)
 
 [node name="Fase2" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("3_jvcxo")]
-z_index = 1
-position = Vector2(7155, 484)
 
 [node name="BG" type="Node2D" parent="."]
 
@@ -35,8 +62,8 @@ scale = Vector2(0.5, 0.503086)
 texture = ExtResource("1_rwrjk")
 
 [node name="textura2" type="Sprite2D" parent="BG/1"]
-position = Vector2(1729, 326)
-scale = Vector2(0.5, 0.503086)
+position = Vector2(1729, 396)
+scale = Vector2(0.5, 0.611111)
 texture = ExtResource("1_rwrjk")
 
 [node name="textura3" type="Sprite2D" parent="BG/1"]
@@ -64,43 +91,72 @@ position = Vector2(5187, 326)
 scale = Vector2(0.5, 0.503086)
 texture = ExtResource("1_rwrjk")
 
+[node name="textura8" type="Sprite2D" parent="BG/1"]
+position = Vector2(8638, 326)
+scale = Vector2(0.5, 0.503086)
+texture = ExtResource("1_rwrjk")
+
 [node name="2" type="Parallax2D" parent="BG"]
 z_index = 5
 
 [node name="textura1" type="Sprite2D" parent="BG/2"]
-position = Vector2(451, 326)
-scale = Vector2(2.4375, 2)
+position = Vector2(451, 392.5)
+scale = Vector2(2.4375, 2.41049)
 texture = ExtResource("2_gu6xs")
 
 [node name="textura2" type="Sprite2D" parent="BG/2"]
-position = Vector2(1730, 326)
-scale = Vector2(2, 2)
+position = Vector2(1730, 393)
+scale = Vector2(2, 2.41358)
 texture = ExtResource("2_gu6xs")
 
 [node name="textura3" type="Sprite2D" parent="BG/2"]
-position = Vector2(2881, 326)
-scale = Vector2(2, 2)
+position = Vector2(2881, 402)
+scale = Vector2(2, 2.46914)
 texture = ExtResource("2_gu6xs")
 
 [node name="textura4" type="Sprite2D" parent="BG/2"]
-position = Vector2(4033, 55.5)
-scale = Vector2(2, 3.66975)
+position = Vector2(4033, 135)
+scale = Vector2(2, 4.16049)
 texture = ExtResource("6_ta6vq")
 
 [node name="textura5" type="Sprite2D" parent="BG/2"]
-position = Vector2(6340, -74.0001)
-scale = Vector2(2, 4.48148)
+position = Vector2(6340, -11)
+scale = Vector2(2, 4.87037)
 texture = ExtResource("7_7tn7l")
 
 [node name="textura6" type="Sprite2D" parent="BG/2"]
-position = Vector2(7486, 326)
-scale = Vector2(2, 1.99383)
+position = Vector2(7486, 396)
+scale = Vector2(2, 2.42593)
 texture = ExtResource("8_uu5f7")
 
 [node name="textura7" type="Sprite2D" parent="BG/2"]
-position = Vector2(5187, 326)
-scale = Vector2(2, 2)
+position = Vector2(5187, 418)
+scale = Vector2(2, 2.5679)
 texture = ExtResource("2_gu6xs")
+
+[node name="textura8" type="Sprite2D" parent="BG/2"]
+z_index = 1
+position = Vector2(8691.5, 392.5)
+scale = Vector2(2.20313, 2.40432)
+texture = ExtResource("8_uu5f7")
+
+[node name="textura9" type="Sprite2D" parent="BG/2"]
+z_index = -4
+position = Vector2(8730.42, 359.224)
+scale = Vector2(-2.15076, 2.23306)
+texture = ExtResource("9_rgchu")
+
+[node name="textura10" type="Sprite2D" parent="BG/2"]
+z_index = 9
+position = Vector2(8752, 362)
+scale = Vector2(-2.02778, 2.18519)
+texture = ExtResource("10_u1ir0")
+
+[node name="textura11" type="Sprite2D" parent="BG/2"]
+z_index = -4
+position = Vector2(12235.6, 413.592)
+scale = Vector2(-3.08997, 1.77586)
+texture = ExtResource("11_8xugt")
 
 [node name="3" type="Parallax2D" parent="BG"]
 
@@ -121,21 +177,134 @@ position = Vector2(333, 350)
 scale = Vector2(2, 2)
 texture = ExtResource("10_u1ir0")
 
+[node name="4" type="Parallax2D" parent="BG"]
+
+[node name="1" type="Sprite2D" parent="BG/4"]
+position = Vector2(4917.5, 748.5)
+scale = Vector2(161.516, 4.89063)
+texture = ExtResource("11_t57wp")
+
+[node name="5" type="Parallax2D" parent="BG"]
+
+[node name="1" type="Sprite2D" parent="BG/5"]
+z_index = 5
+position = Vector2(689, 742)
+rotation = 0.359538
+scale = Vector2(2, 2)
+texture = ExtResource("12_52l4i")
+
+[node name="2" type="Sprite2D" parent="BG/5"]
+position = Vector2(1734, 75)
+rotation = 0.359538
+scale = Vector2(2, 2)
+texture = ExtResource("13_fl0xr")
+
+[node name="4" type="Sprite2D" parent="BG/5"]
+position = Vector2(1191, 424)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wje56")
+
+[node name="5" type="AnimatedSprite2D" parent="BG/5"]
+position = Vector2(3617, 184)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5opwl")
+autoplay = "default"
+frame_progress = 0.00679385
+
+[node name="6" type="Sprite2D" parent="BG/5"]
+position = Vector2(4816, 156)
+rotation = -0.897099
+scale = Vector2(2, 2)
+texture = ExtResource("18_n46uc")
+
+[node name="7" type="Sprite2D" parent="BG/5"]
+position = Vector2(6235, 507)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("19_5l2cn")
+
+[node name="8" type="Sprite2D" parent="BG/5"]
+position = Vector2(5355, 114)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("20_88khk")
+
+[node name="9" type="Sprite2D" parent="BG/5"]
+position = Vector2(6670, 449)
+scale = Vector2(2, 2)
+texture = ExtResource("21_w48ij")
+
+[node name="10" type="Sprite2D" parent="BG/5"]
+position = Vector2(7176, 525)
+scale = Vector2(3, 3)
+texture = ExtResource("22_1r8lj")
+
+[node name="11" type="Sprite2D" parent="BG/5"]
+z_index = 5
+position = Vector2(7595, 703)
+rotation = 1.61617
+scale = Vector2(3, 3)
+texture = ExtResource("23_sa0xh")
+
 [node name="chao" type="StaticBody2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao"]
-position = Vector2(4677.88, 616)
+position = Vector2(4660, 664)
 shape = SubResource("RectangleShape2D_b2i7h")
 
 [node name="parede" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="parede"]
 position = Vector2(-95, 362)
 shape = SubResource("RectangleShape2D_xith1")
 
-[node name="Passagem" type="CollisionShape2D" parent="parede"]
-position = Vector2(8837, 294)
+[node name="Passagem" type="Area2D" parent="."]
+script = ExtResource("24_u5nt3")
+
+[node name="Passagem" type="CollisionShape2D" parent="Passagem"]
+position = Vector2(9313, 321)
 shape = SubResource("RectangleShape2D_xith1")
 
-[node name="boss_fase2" parent="." instance=ExtResource("12_ud8pu")]
-position = Vector2(7890, 460)
+[node name="Player" parent="." instance=ExtResource("3_jvcxo")]
+position = Vector2(86, 515)
+scale = Vector2(2.5, 2.5)
+
+[node name="inimigos" type="Node2D" parent="."]
+
+[node name="cobra" parent="inimigos" instance=ExtResource("25_owb7e")]
+position = Vector2(1144, 336)
+scale = Vector2(5, 5)
+
+[node name="cobra3" parent="inimigos" instance=ExtResource("25_owb7e")]
+position = Vector2(3516, 344)
+scale = Vector2(5, 5)
+
+[node name="cobra4" parent="inimigos" instance=ExtResource("25_owb7e")]
+position = Vector2(5700, 336)
+scale = Vector2(5, 5)
+
+[node name="inimigo_arqueiro" parent="inimigos" instance=ExtResource("26_kdks0")]
+position = Vector2(2025, 452)
+scale = Vector2(1.6, 1.6)
+
+[node name="inimigo_arqueiro2" parent="inimigos" instance=ExtResource("26_kdks0")]
+position = Vector2(4396, 451)
+scale = Vector2(1.6, 1.6)
+
+[node name="boss_fase2" parent="inimigos" instance=ExtResource("12_ud8pu")]
+position = Vector2(8004, 344)
+scale = Vector2(2.5, 2.5)
+
+[node name="pocoes" type="Node2D" parent="."]
+
+[node name="pocao" parent="pocoes" instance=ExtResource("28_4raod")]
+position = Vector2(5352, 563)
+scale = Vector2(1.5, 1.5)
+
+[node name="pocao2" parent="pocoes" instance=ExtResource("28_4raod")]
+position = Vector2(3116, 571)
+scale = Vector2(2, 2)
+
+[connection signal="body_entered" from="Passagem" to="Passagem" method="_on_body_entered"]
