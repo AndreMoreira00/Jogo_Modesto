@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 	
 	if $AnimatedSprite2D.animation != "morrer" and exit and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 10:
 			$AnimatedSprite2D.play("andar")
+			$HitBox/HitBox.disabled = true
 
 func _on_body_entered(body: Node2D) -> void:
 	exit = false

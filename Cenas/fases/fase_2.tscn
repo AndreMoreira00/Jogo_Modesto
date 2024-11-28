@@ -270,7 +270,7 @@ position = Vector2(9313, 321)
 shape = SubResource("RectangleShape2D_xith1")
 
 [node name="Player" parent="." instance=ExtResource("3_jvcxo")]
-position = Vector2(6447, 508)
+position = Vector2(73.0001, 506)
 scale = Vector2(2.5, 2.5)
 
 [node name="inimigos" type="Node2D" parent="."]
@@ -280,7 +280,7 @@ position = Vector2(1144, 336)
 scale = Vector2(5, 5)
 
 [node name="cobra3" parent="inimigos" instance=ExtResource("25_owb7e")]
-position = Vector2(3516, 344)
+position = Vector2(3540, 344)
 scale = Vector2(5, 5)
 
 [node name="cobra4" parent="inimigos" instance=ExtResource("25_owb7e")]
@@ -292,7 +292,7 @@ position = Vector2(2025, 452)
 scale = Vector2(1.6, 1.6)
 
 [node name="inimigo_arqueiro2" parent="inimigos" instance=ExtResource("26_kdks0")]
-position = Vector2(4396, 451)
+position = Vector2(4426, 451)
 scale = Vector2(1.6, 1.6)
 
 [node name="boss_fase2" parent="inimigos" instance=ExtResource("12_ud8pu")]

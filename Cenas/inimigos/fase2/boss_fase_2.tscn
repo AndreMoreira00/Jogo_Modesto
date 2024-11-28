@@ -212,7 +212,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"atacar",
-"speed": 7.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -336,9 +336,9 @@ script = ExtResource("2_7buh2")
 position = Vector2(-15, -2)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_ysaj5")
-animation = &"special"
+animation = &"atacar"
 autoplay = "andar"
-frame = 4
+frame = 6
 frame_progress = 1.0
 flip_h = true
 
