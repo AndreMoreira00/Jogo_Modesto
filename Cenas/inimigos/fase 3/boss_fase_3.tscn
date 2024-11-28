@@ -13,7 +13,7 @@
 size = Vector2(196, 91)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltint"]
-size = Vector2(398, 113)
+size = Vector2(281, 113)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cfkcr"]
 atlas = ExtResource("5_vcnf7")
@@ -273,7 +273,7 @@ shape = SubResource("RectangleShape2D_lyeg3")
 script = ExtResource("2_fb5bi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D"]
-position = Vector2(0, 10.5)
+position = Vector2(29.5, 10.5)
 shape = SubResource("RectangleShape2D_ltint")
 debug_color = Color(7.70092e-07, 0.648282, 0.185883, 0.42)
 
@@ -281,9 +281,9 @@ debug_color = Color(7.70092e-07, 0.648282, 0.185883, 0.42)
 position = Vector2(-9, -29)
 scale = Vector2(-1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_ebfyr")
-animation = &"morrer"
+animation = &"atacar"
 autoplay = "andar"
-frame = 4
+frame = 17
 frame_progress = 1.0
 
 [node name="HitBox" type="Area2D" parent="inimigo/Area2D"]

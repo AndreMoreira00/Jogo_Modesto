@@ -1,17 +1,23 @@
 extends Area2D
 var player: Node2D
 
+var exit = true
 var lado = 'l'
 var is_attacking = false
 @onready var attack_timer: Timer = Timer.new()
+@onready var entred_timer: Timer = Timer.new()
 
 func _ready() -> void:
 	$AnimatedSprite2D.connect("frame_changed", Callable(self, "_on_frame_changed"))
 	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_finished"))
 	
 	add_child(attack_timer)
-	attack_timer.wait_time = 3
+	attack_timer.wait_time = 2
 	attack_timer.one_shot = true  
+
+	add_child(entred_timer)
+	entred_timer.wait_time = 0.1 
+	entred_timer.one_shot = true 
 
 func _process(delta: float) -> void:
 	if player:
@@ -31,23 +37,31 @@ func _process(delta: float) -> void:
 		await attack_timer.timeout
 		if player:
 			is_attacking = true
+	
+	if $AnimatedSprite2D.animation != "morrer" and exit and $AnimatedSprite2D.animation == "atacar" and $AnimatedSprite2D.frame == 17:
+			$AnimatedSprite2D.play("andar")
+			$HitBox/HitBox.disabled = true
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "player":
+	exit = false
+	entred_timer.start()
+	await entred_timer.timeout
+	if body.name == "player" and exit == false:
 		player = body
 		is_attacking = true
 
 func _on_body_exited(body: Node2D) -> void:
+	exit = true
 	if body == player:
 		player = null
 		is_attacking = false
 		$HitBox/HitBox.disabled = true
-		if $AnimatedSprite2D.animation != "morrer":
-			$AnimatedSprite2D.play("andar")
-			if lado == 'l':
-				$AnimatedSprite2D.scale.x *= 1
-			else:
-				$AnimatedSprite2D.scale.x *= -1
+		#if $AnimatedSprite2D.animation != "morrer":
+			#$AnimatedSprite2D.play("andar")
+			#if lado == 'l':
+				#$AnimatedSprite2D.scale.x *= 1
+			#else:
+				#$AnimatedSprite2D.scale.x *= -1
 		
 
 func _on_frame_changed():

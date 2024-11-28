@@ -7,7 +7,7 @@ var RIGHT_DISTANCE = 3 * SPEED
 var move_direction = -1
 var distance_traveled = 0.0  
 
-var vida = 3
+var vida = 5.0
 var is_dead = false
 
 func _ready():
@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	if $Area2D/AnimatedSprite2D.animation == "andar":
+	if $Area2D/AnimatedSprite2D.animation == "andar" and is_dead == false:
 		patrol(delta)
 		move_and_slide()
 
@@ -32,7 +32,7 @@ func patrol(delta: float) -> void:
 
 func dano(DANO):
 	vida-=DANO
-	if vida<= 0:
+	if vida<= 0.0:
 		is_dead = true
 		$Area2D/AnimatedSprite2D.play("morrer")
 		SPEED = 0

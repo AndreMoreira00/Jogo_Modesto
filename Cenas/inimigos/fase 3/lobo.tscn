@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/inimigos/fase 3/hit_box_lobo.gd" id="7_sa27f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6kd5"]
-size = Vector2(69, 82)
+size = Vector2(69, 84)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlrpo"]
 atlas = ExtResource("3_cma5i")
@@ -166,7 +166,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"morrer",
-"speed": 3.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8j4"]
@@ -181,16 +181,16 @@ size = Vector2(27, 83)
 script = ExtResource("1_yk5wq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="inimigo"]
-position = Vector2(1.5, 21)
+position = Vector2(1.5, 22)
 shape = SubResource("RectangleShape2D_s6kd5")
 
 [node name="Area2D" type="Area2D" parent="inimigo"]
 script = ExtResource("2_686ik")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo/Area2D"]
-scale = Vector2(-1.15, 1.15)
+scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_652wp")
-animation = &"atacar"
+animation = &"morrer"
 autoplay = "andar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D"]

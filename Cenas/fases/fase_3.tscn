@@ -1,16 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgppxcq5r76u0"]
+[gd_scene load_steps=13 format=3 uid="uid://dgppxcq5r76u0"]
 
 [ext_resource type="Texture2D" uid="uid://b167qsxvolrd8" path="res://Sprites/fase 3/background.png" id="1_ga4uh"]
 [ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="2_fk3j4"]
 [ext_resource type="Texture2D" uid="uid://lamullinfp14" path="res://Sprites/fase 3/chão real oficial.png" id="2_k44sh"]
+[ext_resource type="Texture2D" uid="uid://b6qiuqx23vcox" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 2 - 3/Saida fase 2  para fase 3 - camada superior.png" id="2_kpmm5"]
+[ext_resource type="Texture2D" uid="uid://0uunfsrblxlh" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 3 - 4/castelo.png" id="3_gqrug"]
 [ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="3_r0eth"]
+[ext_resource type="Texture2D" uid="uid://cv2telbjt6ma1" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 3 - 4/castelo camda frente.png" id="4_gtd3m"]
 [ext_resource type="PackedScene" uid="uid://cwxyyj6l3ya58" path="res://Cenas/inimigos/fase 3/lobo.tscn" id="5_nothp"]
+[ext_resource type="PackedScene" uid="uid://dpf188a12c1f3" path="res://Cenas/inimigos/fase 3/boss_fase_3.tscn" id="9_4mfv2"]
+[ext_resource type="PackedScene" uid="uid://8ahga7ag21xq" path="res://Cenas/player/pocao.tscn" id="10_nqj0f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r55mn"]
-size = Vector2(4213, 7)
+size = Vector2(8820, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s13s1"]
-size = Vector2(776.556, 14.8533)
+size = Vector2(776.556, 35.3088)
 
 [node name="Fase3" type="Node2D"]
 
@@ -19,8 +24,8 @@ size = Vector2(776.556, 14.8533)
 [node name="Parallax2D" type="Parallax2D" parent="BG"]
 
 [node name="Background" type="Sprite2D" parent="BG/Parallax2D"]
-position = Vector2(27.4996, 8.49988)
-scale = Vector2(1.5816, 1.96605)
+position = Vector2(10.5002, 8.49988)
+scale = Vector2(1.64063, 1.96605)
 texture = ExtResource("1_ga4uh")
 
 [node name="Background6" type="Sprite2D" parent="BG/Parallax2D"]
@@ -43,33 +48,103 @@ position = Vector2(3657, 8)
 scale = Vector2(1.5816, 1.96605)
 texture = ExtResource("1_ga4uh")
 
+[node name="Background2" type="Sprite2D" parent="BG/Parallax2D"]
+z_index = 6
+position = Vector2(192.302, 177.744)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_kpmm5")
+
+[node name="Background10" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(4567, 8)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background11" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(5478, 8)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background12" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(6389, 8)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background13" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(7300, 8)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background14" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(7066.83, 186.88)
+scale = Vector2(1.5, 1.354)
+texture = ExtResource("3_gqrug")
+
+[node name="Background15" type="Sprite2D" parent="BG/Parallax2D"]
+z_index = 3
+position = Vector2(7066, 186.44)
+scale = Vector2(1.5, 1.354)
+texture = ExtResource("4_gtd3m")
+
 [node name="Parallax2D2" type="Parallax2D" parent="BG"]
 
 [node name="ChãoRealOficial" type="Sprite2D" parent="BG"]
-position = Vector2(1882.75, 536)
-scale = Vector2(69.6641, 6.5625)
+z_index = -1
+position = Vector2(4120, 536)
+scale = Vector2(143.219, 6.5625)
 texture = ExtResource("2_k44sh")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="textura11" type="Sprite2D" parent="BG"]
+position = Vector2(742.302, 155.744)
+rotation = 3.14159
+scale = Vector2(1.25344, -1.49929)
+texture = ExtResource("2_fk3j4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2006.5, 361.5)
+[node name="Colisoes" type="StaticBody2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes"]
+position = Vector2(4310, 400)
 shape = SubResource("RectangleShape2D_r55mn")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Colisoes"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D"]
-position = Vector2(-101.482, 124.829)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes/StaticBody2D"]
+position = Vector2(-115.109, 124.591)
 rotation = 1.58825
 shape = SubResource("RectangleShape2D_s13s1")
 
 [node name="Player" parent="." instance=ExtResource("3_r0eth")]
-position = Vector2(94, 267)
+position = Vector2(4752, 262)
 
-[node name="textura11" type="Sprite2D" parent="."]
-position = Vector2(745, 114)
-scale = Vector2(-1.25344, 1.49929)
-texture = ExtResource("2_fk3j4")
+[node name="inimigos" type="Node2D" parent="."]
 
-[node name="lobo" parent="." instance=ExtResource("5_nothp")]
-position = Vector2(333, 275)
+[node name="lobo" parent="inimigos" instance=ExtResource("5_nothp")]
+position = Vector2(1031, 233)
+scale = Vector2(1.8, 1.8)
+
+[node name="lobo2" parent="inimigos" instance=ExtResource("5_nothp")]
+position = Vector2(1792, 238)
+scale = Vector2(1.8, 1.8)
+
+[node name="lobo3" parent="inimigos" instance=ExtResource("5_nothp")]
+position = Vector2(3002, 238)
+scale = Vector2(1.8, 1.8)
+
+[node name="lobo4" parent="inimigos" instance=ExtResource("5_nothp")]
+position = Vector2(3997, 238)
+scale = Vector2(1.8, 1.8)
+
+[node name="boss_fase_3" parent="inimigos" instance=ExtResource("9_4mfv2")]
+position = Vector2(5980, 219)
+scale = Vector2(2, 2)
+
+[node name="Pocoes" type="Node2D" parent="."]
+
+[node name="pocao" parent="Pocoes" instance=ExtResource("10_nqj0f")]
+position = Vector2(2353, 308)
+scale = Vector2(2, 2)
+
+[node name="pocao2" parent="Pocoes" instance=ExtResource("10_nqj0f")]
+position = Vector2(4638, 303)
+scale = Vector2(2, 2)
