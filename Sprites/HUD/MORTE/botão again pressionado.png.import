@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://33adsrphludv"
+=======
+uid="uid://s7cn01b5d8va"
+>>>>>>> fbcdf37834fbc070e55521597f02bdbe86d348ee
 path="res://.godot/imported/botão again pressionado.png-18dbfa68ad6e9ceb1d9fc56f360683ad.ctex"
 metadata={
 "vram_texture": false

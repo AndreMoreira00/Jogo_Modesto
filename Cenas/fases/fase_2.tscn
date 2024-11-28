@@ -268,7 +268,7 @@ position = Vector2(9313, 321)
 shape = SubResource("RectangleShape2D_xith1")
 
 [node name="Player" parent="." instance=ExtResource("3_jvcxo")]
-position = Vector2(86, 515)
+position = Vector2(6447, 508)
 scale = Vector2(2.5, 2.5)
 
 [node name="inimigos" type="Node2D" parent="."]

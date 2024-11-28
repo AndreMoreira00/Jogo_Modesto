@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://d4cyfafkbp7a6"]
+[gd_scene load_steps=54 format=3 uid="uid://d4cyfafkbp7a6"]
 
 [ext_resource type="Script" path="res://Cenas/inimigos/fase2/boss.gd" id="1_ow122"]
 [ext_resource type="Script" path="res://Cenas/inimigos/fase2/area_2d.gd" id="2_7buh2"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://buue1wnmjavpe" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Hurt_new.png" id="5_3y5oy"]
 [ext_resource type="Texture2D" uid="uid://bonwyld7nmjng" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Dead.png" id="5_shhlv"]
 [ext_resource type="Texture2D" uid="uid://b51bpukdwfic2" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Special.png" id="6_7u5tl"]
+[ext_resource type="Texture2D" uid="uid://ceovj7peb2nq3" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/ataque especial.png" id="8_w45ge"]
+[ext_resource type="Script" path="res://Cenas/inimigos/fase2/hit_box_especial.gd" id="10_q21o6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pn8wb"]
 size = Vector2(73, 119)
@@ -264,11 +266,58 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldimx"]
+atlas = ExtResource("8_w45ge")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afqvq"]
+atlas = ExtResource("8_w45ge")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hly7"]
+atlas = ExtResource("8_w45ge")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfdg4"]
+atlas = ExtResource("8_w45ge")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3mwp"]
+atlas = ExtResource("8_w45ge")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2nwy0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldimx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afqvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hly7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfdg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3mwp")
+}],
+"loop": false,
+"name": &"ataque_especial",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf1uc"]
 size = Vector2(213, 184.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy0hl"]
 size = Vector2(78, 133)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_db30t"]
+radius = 22.6716
+height = 127.916
 
 [node name="boss_fase2" type="Node2D"]
 
@@ -290,8 +339,16 @@ sprite_frames = SubResource("SpriteFrames_ysaj5")
 animation = &"andar"
 flip_h = true
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="boss/Area2D"]
+position = Vector2(-66, 67)
+rotation = -0.509636
+scale = Vector2(1.52344, 1.45313)
+sprite_frames = SubResource("SpriteFrames_2nwy0")
+animation = &"ataque_especial"
+flip_h = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss/Area2D"]
-position = Vector2(-28.5, 18)
+position = Vector2(-33, 22)
 shape = SubResource("RectangleShape2D_gf1uc")
 debug_color = Color(0.156309, 0.631539, 0.380729, 0.42)
 
@@ -304,6 +361,17 @@ shape = SubResource("RectangleShape2D_uy0hl")
 disabled = true
 debug_color = Color(0.98717, 0, 0.315891, 0.42)
 
+[node name="HitBox_Especial" type="Area2D" parent="boss/Area2D"]
+script = ExtResource("10_q21o6")
+
+[node name="Collision_Shape_Especial" type="CollisionShape2D" parent="boss/Area2D/HitBox_Especial"]
+position = Vector2(-63, 61)
+rotation = 0.84823
+shape = SubResource("CapsuleShape2D_db30t")
+disabled = true
+debug_color = Color(0.940999, 1.10701e-05, 0.612536, 0.42)
+
 [connection signal="body_entered" from="boss/Area2D" to="boss/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="boss/Area2D" to="boss/Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="boss/Area2D/HitBox" to="boss/Area2D/HitBox" method="_on_body_entered"]
+[connection signal="body_entered" from="boss/Area2D/HitBox_Especial" to="boss/Area2D/HitBox_Especial" method="_on_body_entered"]
