@@ -1353,7 +1353,7 @@ sources/0 = SubResource("TileSetAtlasSource_j7fcg")
 
 [node name="Player" parent="." instance=ExtResource("1_vxj0m")]
 z_index = 1
-position = Vector2(59.0002, 643)
+position = Vector2(59.0001, 652)
 scale = Vector2(2.5, 2.5)
 
 [node name="Inimigos" type="Node2D" parent="."]
@@ -1412,7 +1412,7 @@ shape = SubResource("RectangleShape2D_h3tpc")
 script = ExtResource("24_8gggb")
 
 [node name="Passagem" type="CollisionShape2D" parent="Colisoes/Passagem"]
-position = Vector2(8854, 317)
+position = Vector2(9075, 317)
 shape = SubResource("RectangleShape2D_h3tpc")
 
 [node name="BG" type="Node2D" parent="."]
@@ -1425,7 +1425,7 @@ scale = Vector2(2, 2)
 
 [node name="texture" type="Sprite2D" parent="BG/areia"]
 position = Vector2(-159, 318)
-scale = Vector2(75.5, 3.9375)
+scale = Vector2(78.3984, 7)
 texture = ExtResource("6_ul5a1")
 centered = false
 flip_h = true

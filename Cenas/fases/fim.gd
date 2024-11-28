@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
-		get_tree().change_scene_to_file("res://Cenas/fases/fase_2.tscn")
+		get_tree().paused = true
+		$Control/VideoStreamPlayer.play()

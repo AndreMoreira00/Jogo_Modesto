@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		is_dead = true
 		SPEED = 0
 		$AnimatedSprite2D.play("morrer")
-	
+		
 	if current_stamina < max_stamina:
 		current_stamina += 20 * delta
 		if current_stamina > max_stamina:
@@ -122,7 +122,12 @@ func _on_animation_ataque_finished():
 		
 func _on_animation_dead_finished():
 	if $AnimatedSprite2D.animation == "morrer":
-		$'.'.queue_free()
+		print("Jogador morreu. Reiniciando fase...")
+		var current_scene_path = get_tree().get_current_scene().get_scene_file_path()
+		if current_scene_path != "":
+			get_tree().change_scene_to_file(current_scene_path)
+		else:
+			print("Erro: caminho da cena atual não encontrado.")
 
 func _on_animation_dodge_finished():
 	if $AnimatedSprite2D.animation == "esquiva":
@@ -134,34 +139,40 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.dano(DANO)
 
 func dano_player(dano):
-	vida-=dano
-	match vida:
-		0.0:
-			$"Camera2D/vidas/1".play("sumindo")
-		0.5:
-			if dano == 1:
+	if dano == 1.0:
+		vida-=dano
+		match vida:
+			-0.5:
 				$"Camera2D/vidas/1".play("sumindo")
-			else:
-				$"Camera2D/vidas/1".play("metade")
-		1.0:
-			if dano == 1 and vida != 1:
-				$"Camera2D/vidas/1".play("dano")
-			$"Camera2D/vidas/2".play("sumindo")
-		1.5:
-			if dano == 1:
-				$"Camera2D/vidas/1".play("dano")
-			else:
-				$"Camera2D/vidas/2".play("dano")
-		2.0:
-			if dano == 1 and vida != 2:
+			0.0:
+				$"Camera2D/vidas/1".play("sumindo")
+			0.5:
 				$"Camera2D/vidas/2".play("sumindo")
-			$"Camera2D/vidas/3".play("sumindo")
-		2.5:
-			if dano == 1:
+				$"Camera2D/vidas/1".play("dano")
+			1.0:
+				$"Camera2D/vidas/2".play("sumindo")
+			1.5:
 				$"Camera2D/vidas/3".play("sumindo")
-			else:
+				$"Camera2D/vidas/2".play("dano")
+			2.0:
+				$"Camera2D/vidas/3".play("sumindo")
+	else:
+		vida-=dano
+		match vida:
+			-0.5:
+				$"Camera2D/vidas/1".play("sumindo")
+			0.0:
+				$"Camera2D/vidas/1".play("sumindo")
+			0.5:
+				$"Camera2D/vidas/1".play("dano")
+			1.0:
+				$"Camera2D/vidas/2".play("sumindo")
+			1.5:
+				$"Camera2D/vidas/2".play("dano")
+			2.0:
+				$"Camera2D/vidas/3".play("sumindo")
+			2.5:
 				$"Camera2D/vidas/3".play("dano")
-	
 func update_stamina_bar():
 	# Envia o valor atualizado para a UI
 	$Camera2D/ProgressBar.value = current_stamina

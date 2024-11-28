@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1ibanlg50xda"]
+
+[ext_resource type="Texture2D" uid="uid://co4j6740rd183" path="res://Sprites/HUD/MORTE/textura de fundo.png" id="1_vmwpf"]
+[ext_resource type="Texture2D" uid="uid://basbmm6u20ip5" path="res://Sprites/HUD/MORTE/morreu.png" id="2_ln2gd"]
+[ext_resource type="Texture2D" uid="uid://vwvmog5vat7p" path="res://Sprites/HUD/MORTE/botão again normal.png" id="4_68q7i"]
+[ext_resource type="Texture2D" uid="uid://33adsrphludv" path="res://Sprites/HUD/MORTE/botão again pressionado.png" id="4_clg6i"]
+
+[node name="Menu_morte" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vmwpf")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+texture = ExtResource("2_ln2gd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+action_mode = 0
+texture_normal = ExtResource("4_68q7i")
+texture_pressed = ExtResource("4_clg6i")

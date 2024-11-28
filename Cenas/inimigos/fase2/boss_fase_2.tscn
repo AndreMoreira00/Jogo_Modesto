@@ -1,15 +1,15 @@
 [gd_scene load_steps=54 format=3 uid="uid://d4cyfafkbp7a6"]
 
-[ext_resource type="Script" path="res://Cenas/inimigos/fase2/boss.gd" id="1_ow122"]
-[ext_resource type="Script" path="res://Cenas/inimigos/fase2/area_2d.gd" id="2_7buh2"]
+[ext_resource type="Script" path="res://Scripts/inimigos/fase 2/boss.gd" id="1_ow122"]
+[ext_resource type="Script" path="res://Scripts/inimigos/fase 2/area_2d.gd" id="2_7buh2"]
 [ext_resource type="Texture2D" uid="uid://cu0i1gm7psh4a" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Walk.png" id="3_e30vi"]
-[ext_resource type="Script" path="res://Cenas/inimigos/fase2/hitbox.gd" id="4_hq7jy"]
+[ext_resource type="Script" path="res://Scripts/inimigos/fase 2/hitbox.gd" id="4_hq7jy"]
 [ext_resource type="Texture2D" uid="uid://dfux1784c128f" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Attack_2.png" id="4_rl8im"]
 [ext_resource type="Texture2D" uid="uid://buue1wnmjavpe" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Hurt_new.png" id="5_3y5oy"]
 [ext_resource type="Texture2D" uid="uid://bonwyld7nmjng" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Dead.png" id="5_shhlv"]
 [ext_resource type="Texture2D" uid="uid://b51bpukdwfic2" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/Special.png" id="6_7u5tl"]
 [ext_resource type="Texture2D" uid="uid://ceovj7peb2nq3" path="res://Sprites/fase 2/INIMIGOS/Boss/Gorgon_1/ataque especial.png" id="8_w45ge"]
-[ext_resource type="Script" path="res://Cenas/inimigos/fase2/hit_box_especial.gd" id="10_q21o6"]
+[ext_resource type="Script" path="res://Scripts/inimigos/fase 2/hit_box_especial.gd" id="10_q21o6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pn8wb"]
 size = Vector2(73, 119)
@@ -186,7 +186,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"andar",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -212,7 +212,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"atacar",
-"speed": 10.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -263,7 +263,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"special",
-"speed": 8.0
+"speed": 5.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ldimx"]
@@ -306,14 +306,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"ataque_especial",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf1uc"]
-size = Vector2(213, 184.5)
+size = Vector2(211, 184.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy0hl"]
-size = Vector2(78, 133)
+size = Vector2(64, 117.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_db30t"]
 radius = 22.6716
@@ -336,7 +336,10 @@ script = ExtResource("2_7buh2")
 position = Vector2(-15, -2)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_ysaj5")
-animation = &"andar"
+animation = &"special"
+autoplay = "andar"
+frame = 4
+frame_progress = 1.0
 flip_h = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="boss/Area2D"]
@@ -348,7 +351,7 @@ animation = &"ataque_especial"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss/Area2D"]
-position = Vector2(-33, 22)
+position = Vector2(-44.5, 22)
 shape = SubResource("RectangleShape2D_gf1uc")
 debug_color = Color(0.156309, 0.631539, 0.380729, 0.42)
 
@@ -356,7 +359,7 @@ debug_color = Color(0.156309, 0.631539, 0.380729, 0.42)
 script = ExtResource("4_hq7jy")
 
 [node name="HitBox" type="CollisionShape2D" parent="boss/Area2D/HitBox"]
-position = Vector2(-92, 42)
+position = Vector2(-79, 50)
 shape = SubResource("RectangleShape2D_uy0hl")
 disabled = true
 debug_color = Color(0.98717, 0, 0.315891, 0.42)
