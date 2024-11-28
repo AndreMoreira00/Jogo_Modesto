@@ -342,7 +342,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"atacando_forte",
-"speed": 4.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -365,7 +365,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"atacando_fraco",
-"speed": 10.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -542,10 +542,8 @@ show_percentage = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_lr5sm")
-animation = &"esquiva"
+animation = &"atacando_forte"
 autoplay = "repouso"
-frame = 2
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(-4.5, 20.5)

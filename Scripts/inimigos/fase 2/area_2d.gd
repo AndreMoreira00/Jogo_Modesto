@@ -2,8 +2,9 @@ extends Area2D
 
 var player: Node2D
 var is_attacking = false
-
+var exit = true
 @onready var attack_timer: Timer = Timer.new()
+@onready var entred_timer: Timer = Timer.new()
 
 var special_attack_chance = 20
 
@@ -15,8 +16,12 @@ func _ready() -> void:
 	$AnimatedSprite2D2.connect("animation_finished", Callable(self, "_on_special_animation_finished"))
 	
 	add_child(attack_timer)
-	attack_timer.wait_time = 2
+	attack_timer.wait_time = 2.0
 	attack_timer.one_shot = true  
+	
+	add_child(entred_timer)
+	entred_timer.wait_time = 1.0
+	entred_timer.one_shot = true  
 	
 	$AnimatedSprite2D2.visible = false
 
@@ -33,9 +38,10 @@ func _process(delta: float) -> void:
 		if randi() % 100 < special_attack_chance:
 			$AnimatedSprite2D.play("special") 
 			$AnimatedSprite2D2.visible = true
-			$AnimatedSprite2D2.play("ataque_especial")  
+			$AnimatedSprite2D2.play("ataque_especial") 
 		else:
 			$AnimatedSprite2D.play("atacar")  
+			
 		
 		attack_timer.start()
 		await attack_timer.timeout
@@ -43,11 +49,15 @@ func _process(delta: float) -> void:
 			is_attacking = true
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "player":
+	exit = false
+	entred_timer.start()
+	await entred_timer.timeout
+	if body.name == "player" and exit == false:
 		player = body
 		is_attacking = true
 
 func _on_body_exited(body: Node2D) -> void:
+	exit = true
 	if body == player:
 		player = null
 		is_attacking = false

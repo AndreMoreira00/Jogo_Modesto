@@ -53,6 +53,8 @@ size = Vector2(62, 895)
 [node name="Fase2" type="Node2D"]
 
 [node name="BG" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="1" type="Parallax2D" parent="BG"]
 
@@ -180,8 +182,8 @@ texture = ExtResource("10_u1ir0")
 [node name="4" type="Parallax2D" parent="BG"]
 
 [node name="1" type="Sprite2D" parent="BG/4"]
-position = Vector2(4917.5, 748.5)
-scale = Vector2(161.516, 4.89063)
+position = Vector2(5397, 1180)
+scale = Vector2(177.437, 18.375)
 texture = ExtResource("11_t57wp")
 
 [node name="5" type="Parallax2D" parent="BG"]
