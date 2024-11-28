@@ -1,3 +1,75 @@
-[gd_scene format=3 uid="uid://dgppxcq5r76u0"]
+[gd_scene load_steps=8 format=3 uid="uid://dgppxcq5r76u0"]
+
+[ext_resource type="Texture2D" uid="uid://b167qsxvolrd8" path="res://Sprites/fase 3/background.png" id="1_ga4uh"]
+[ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="2_fk3j4"]
+[ext_resource type="Texture2D" uid="uid://lamullinfp14" path="res://Sprites/fase 3/chão real oficial.png" id="2_k44sh"]
+[ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="3_r0eth"]
+[ext_resource type="PackedScene" uid="uid://cwxyyj6l3ya58" path="res://Cenas/inimigos/fase 3/lobo.tscn" id="5_nothp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r55mn"]
+size = Vector2(4213, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s13s1"]
+size = Vector2(776.556, 14.8533)
 
 [node name="Fase3" type="Node2D"]
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="Parallax2D" type="Parallax2D" parent="BG"]
+
+[node name="Background" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(27.4996, 8.49988)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background6" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(933, 8)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background7" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(1838, 8)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background8" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(2746, 9)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Background9" type="Sprite2D" parent="BG/Parallax2D"]
+position = Vector2(3657, 8)
+scale = Vector2(1.5816, 1.96605)
+texture = ExtResource("1_ga4uh")
+
+[node name="Parallax2D2" type="Parallax2D" parent="BG"]
+
+[node name="ChãoRealOficial" type="Sprite2D" parent="BG"]
+position = Vector2(1882.75, 536)
+scale = Vector2(69.6641, 6.5625)
+texture = ExtResource("2_k44sh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2006.5, 361.5)
+shape = SubResource("RectangleShape2D_r55mn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D"]
+position = Vector2(-101.482, 124.829)
+rotation = 1.58825
+shape = SubResource("RectangleShape2D_s13s1")
+
+[node name="Player" parent="." instance=ExtResource("3_r0eth")]
+position = Vector2(94, 267)
+
+[node name="textura11" type="Sprite2D" parent="."]
+position = Vector2(745, 114)
+scale = Vector2(-1.25344, 1.49929)
+texture = ExtResource("2_fk3j4")
+
+[node name="lobo" parent="." instance=ExtResource("5_nothp")]
+position = Vector2(333, 275)

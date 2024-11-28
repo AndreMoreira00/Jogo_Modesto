@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c8b0yg0j5qp7p"]
+[gd_scene load_steps=32 format=3 uid="uid://c8b0yg0j5qp7p"]
 
 [ext_resource type="Texture2D" uid="uid://cyu2vn8xa7gth" path="res://Sprites/fase 2/background 1/camada inferior.png" id="1_rwrjk"]
 [ext_resource type="Texture2D" uid="uid://o1kea6k71gue" path="res://Sprites/fase 2/background 2/camada inferior.png" id="2_7lkd5"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://bxeolut1ynl48" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/caverna fundo.png" id="11_8xugt"]
 [ext_resource type="Texture2D" uid="uid://wyumnwj26b6i" path="res://Sprites/fase 2/background 1/chão real oficial.png" id="11_t57wp"]
 [ext_resource type="Texture2D" uid="uid://bp42nres6kkp0" path="res://Sprites/fase 2/objetos de fundo/256/Dinosaur_skeleton_full_light_shadow.png" id="12_52l4i"]
-[ext_resource type="PackedScene" uid="uid://d4cyfafkbp7a6" path="res://Cenas/inimigos/fase2/boss_fase_2.tscn" id="12_ud8pu"]
 [ext_resource type="Texture2D" uid="uid://c1g01e5g67t3e" path="res://Sprites/fase 2/objetos de fundo/256/centipede_light_shadow2.png" id="13_fl0xr"]
 [ext_resource type="Texture2D" uid="uid://dnapime2eb83m" path="res://Sprites/fase 2/objetos de fundo/128/mushroom2_light_shadow1.png" id="15_wje56"]
 [ext_resource type="Texture2D" uid="uid://b82aaujjwnj3l" path="res://Sprites/fase 2/objetos de fundo/128/magic_circle_dark_shadow.png" id="16_npe68"]
@@ -142,7 +141,7 @@ texture = ExtResource("8_uu5f7")
 
 [node name="textura9" type="Sprite2D" parent="BG/2"]
 z_index = -4
-position = Vector2(8730.42, 359.224)
+position = Vector2(8725.42, 359.224)
 scale = Vector2(-2.15076, 2.23306)
 texture = ExtResource("9_rgchu")
 
@@ -292,10 +291,6 @@ scale = Vector2(1.6, 1.6)
 [node name="inimigo_arqueiro2" parent="inimigos" instance=ExtResource("26_kdks0")]
 position = Vector2(4396, 451)
 scale = Vector2(1.6, 1.6)
-
-[node name="boss_fase2" parent="inimigos" instance=ExtResource("12_ud8pu")]
-position = Vector2(8004, 344)
-scale = Vector2(2.5, 2.5)
 
 [node name="pocoes" type="Node2D" parent="."]
 
