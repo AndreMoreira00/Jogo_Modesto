@@ -16,7 +16,7 @@ func _ready() -> void:
 	attack_timer.one_shot = true  
 
 	add_child(entred_timer)
-	entred_timer.wait_time = 0.1 
+	entred_timer.wait_time = 0.25
 	entred_timer.one_shot = true 
 
 func _process(delta: float) -> void:
@@ -56,12 +56,6 @@ func _on_body_exited(body: Node2D) -> void:
 		player = null
 		is_attacking = false
 		$HitBox/HitBox.disabled = true
-		#if $AnimatedSprite2D.animation != "morrer":
-			#$AnimatedSprite2D.play("andar")
-			#if lado == 'l':
-				#$AnimatedSprite2D.scale.x *= 1
-			#else:
-				#$AnimatedSprite2D.scale.x *= -1
 		
 
 func _on_frame_changed():

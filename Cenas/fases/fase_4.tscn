@@ -305,11 +305,13 @@ size = Vector2(90, 623)
 [node name="Fase4" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("11_xc3k4")]
-position = Vector2(4407, 648)
+position = Vector2(70, 666)
 
 [node name="BG" type="Node2D" parent="."]
 position = Vector2(70, 377)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="1" type="Parallax2D" parent="BG"]
 
@@ -477,6 +479,8 @@ position = Vector2(3535, 635)
 
 [node name="Passagem" type="Area2D" parent="."]
 script = ExtResource("14_igivt")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Passagem" type="CollisionShape2D" parent="Passagem"]
 position = Vector2(5098, 453)

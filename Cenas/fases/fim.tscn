@@ -1,11 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://dpr3x815tav8i"]
+[gd_scene load_steps=13 format=3 uid="uid://dpr3x815tav8i"]
 
 [ext_resource type="Texture2D" uid="uid://cjhfliutx1usl" path="res://Sprites/Cenario/objetos/textura areia.png" id="1_htfp0"]
 [ext_resource type="Texture2D" uid="uid://bujs6uvrrs66n" path="res://Sprites/Cenario/objetos/areia.png" id="2_meig8"]
 [ext_resource type="Texture2D" uid="uid://bxwxwpbxhdhkf" path="res://Sprites/Cenario/objetos/ceu2.png" id="3_7onk5"]
 [ext_resource type="Texture2D" uid="uid://dctqdlq110y8d" path="res://Sprites/Cenario/sailboat.png" id="4_yc761"]
 [ext_resource type="Texture2D" uid="uid://oc8fjoxl4qp8" path="res://Sprites/Cenario/TX Village Props.png" id="5_caoi0"]
-[ext_resource type="Script" path="res://Cenas/fases/fim.gd" id="6_57nv1"]
 [ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="7_aliqu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7fsq"]
@@ -1413,9 +1412,6 @@ sources/0 = SubResource("TileSetAtlasSource_qgpll")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmmtf"]
 size = Vector2(1493.38, 74)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uoj30"]
-size = Vector2(175, 1045.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kx4kg"]
 size = Vector2(46, 986.5)
 
@@ -1423,6 +1419,8 @@ size = Vector2(46, 986.5)
 
 [node name="BG" type="Node2D" parent="."]
 z_index = -3
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="areia" type="Parallax2D" parent="BG"]
 scale = Vector2(2, 2)
@@ -1476,13 +1474,6 @@ metadata/_edit_group_ = true
 position = Vector2(433.313, 1035)
 shape = SubResource("RectangleShape2D_qmmtf")
 
-[node name="Passagem" type="Area2D" parent="."]
-script = ExtResource("6_57nv1")
-
-[node name="Passagem" type="CollisionShape2D" parent="Passagem"]
-position = Vector2(948.5, 487.75)
-shape = SubResource("RectangleShape2D_uoj30")
-
 [node name="Player" parent="." instance=ExtResource("7_aliqu")]
 position = Vector2(4, 882)
 scale = Vector2(2.5, 2.5)
@@ -1492,5 +1483,3 @@ scale = Vector2(2.5, 2.5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="parede"]
 position = Vector2(-91, 522)
 shape = SubResource("RectangleShape2D_kx4kg")
-
-[connection signal="body_entered" from="Passagem" to="Passagem" method="_on_body_entered"]
