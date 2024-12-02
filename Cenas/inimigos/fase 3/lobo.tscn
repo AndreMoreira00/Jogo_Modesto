@@ -170,7 +170,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8j4"]
-size = Vector2(140, 83.5)
+size = Vector2(108, 83.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1dga"]
 size = Vector2(27, 83)
@@ -194,7 +194,7 @@ animation = &"morrer"
 autoplay = "andar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D"]
-position = Vector2(7, 21.75)
+position = Vector2(-9, 21.75)
 shape = SubResource("RectangleShape2D_4s8j4")
 debug_color = Color(6.97896e-07, 0.647441, 0.210965, 0.42)
 

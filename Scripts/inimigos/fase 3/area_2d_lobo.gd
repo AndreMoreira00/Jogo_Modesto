@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 		elif player.global_position.x-150 >= global_position.x:
 			$AnimatedSprite2D.scale.x = 1
 			
-	if is_attacking and $AnimatedSprite2D.animation != "morrer":
+	if is_attacking and $AnimatedSprite2D.animation != "morrer" and exit != true:
 		is_attacking = false
 		$AnimatedSprite2D.play("atacar")
 		attack_timer.start()

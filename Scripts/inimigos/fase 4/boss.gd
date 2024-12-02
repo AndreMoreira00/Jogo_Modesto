@@ -3,7 +3,7 @@ extends CharacterBody2D
 var move_direction = -1
 var distance_traveled = 0.0  
 
-var vida = 15.0
+var vida = 10.0
 var is_dead = false
 
 var ExplosionScene = preload("res://Cenas/bomba/bomba.tscn")

@@ -75,11 +75,11 @@ func _physics_process(delta: float) -> void:
 			$Camera2D/Parallax2D/ataque.visible = true
 			current_stamina -= 60 
 		
-		if Input.is_action_just_pressed("esquiva") and not is_dodge and current_stamina >= 50 and is_attacking == false:
+		if Input.is_action_just_pressed("esquiva") and not is_dodge and current_stamina >= 30 and is_attacking == false:
 			is_dodge = true
 			$AnimatedSprite2D.play("esquiva")
 			$".".collision_layer = 100
-			current_stamina -= 50 
+			current_stamina -= 30 
 	
 	
 # Troca a animação do player

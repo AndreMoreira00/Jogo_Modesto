@@ -1,0 +1,67 @@
+[gd_scene load_steps=14 format=3 uid="uid://dvwokucha48dy"]
+
+[ext_resource type="Texture2D" uid="uid://dkwq6tqmcawoo" path="res://Sprites/HUD/Main Menu Hud/exemplo final.jpeg" id="1_2bitv"]
+[ext_resource type="Script" path="res://Cenas/HUD/button.gd" id="2_hiqtp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbi0p"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77pwc"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kwjjk"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8lla"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81mnn"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjiyw"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5u4go"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw1vx"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2len"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m88a4"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtjgt"]
+modulate_color = Color(1, 1, 1, 0)
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="ExemploFinal" type="Sprite2D" parent="."]
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("1_2bitv")
+centered = false
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="ExemploFinal"]
+offset_left = 91.3044
+offset_top = 178.696
+offset_right = 186.304
+offset_bottom = 210.696
+theme_override_styles/focus = SubResource("StyleBoxTexture_nbi0p")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_77pwc")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_kwjjk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_w8lla")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_81mnn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_vjiyw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5u4go")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_iw1vx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w2len")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_m88a4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qtjgt")
+action_mode = 0
+script = ExtResource("2_hiqtp")
+
+[connection signal="pressed" from="ExemploFinal/Button" to="ExemploFinal/Button" method="_on_pressed"]

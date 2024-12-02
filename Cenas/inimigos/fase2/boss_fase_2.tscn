@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/inimigos/fase 2/hit_box_especial.gd" id="10_q21o6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pn8wb"]
-size = Vector2(73, 119)
+size = Vector2(54, 89)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vkai5"]
 atlas = ExtResource("3_e30vi")
@@ -306,18 +306,18 @@ animations = [{
 }],
 "loop": false,
 "name": &"ataque_especial",
-"speed": 3.0
+"speed": 4.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf1uc"]
-size = Vector2(211, 184.5)
+size = Vector2(160, 102.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy0hl"]
-size = Vector2(64, 117.5)
+size = Vector2(48, 93.75)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_db30t"]
-radius = 22.6716
-height = 127.916
+radius = 29.8175
+height = 83.0076
 
 [node name="boss_fase2" type="Node2D"]
 
@@ -326,15 +326,14 @@ script = ExtResource("1_ow122")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss"]
 visibility_layer = 4
-position = Vector2(-9.5, 49.5)
+position = Vector2(-9, 64.5)
 shape = SubResource("RectangleShape2D_pn8wb")
 
 [node name="Area2D" type="Area2D" parent="boss"]
 script = ExtResource("2_7buh2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="boss/Area2D"]
-position = Vector2(-15, -2)
-scale = Vector2(1.75, 1.75)
+position = Vector2(-14, 43)
 sprite_frames = SubResource("SpriteFrames_ysaj5")
 animation = &"atacar"
 autoplay = "andar"
@@ -343,7 +342,7 @@ frame_progress = 1.0
 flip_h = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="boss/Area2D"]
-position = Vector2(-66, 67)
+position = Vector2(-48, 81)
 rotation = -0.509636
 scale = Vector2(1.52344, 1.45313)
 sprite_frames = SubResource("SpriteFrames_2nwy0")
@@ -351,7 +350,7 @@ animation = &"ataque_especial"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss/Area2D"]
-position = Vector2(-44.5, 22)
+position = Vector2(-35, 63.125)
 shape = SubResource("RectangleShape2D_gf1uc")
 debug_color = Color(0.156309, 0.631539, 0.380729, 0.42)
 
@@ -359,7 +358,7 @@ debug_color = Color(0.156309, 0.631539, 0.380729, 0.42)
 script = ExtResource("4_hq7jy")
 
 [node name="HitBox" type="CollisionShape2D" parent="boss/Area2D/HitBox"]
-position = Vector2(-79, 50)
+position = Vector2(-60, 64.875)
 shape = SubResource("RectangleShape2D_uy0hl")
 disabled = true
 debug_color = Color(0.98717, 0, 0.315891, 0.42)
@@ -368,7 +367,7 @@ debug_color = Color(0.98717, 0, 0.315891, 0.42)
 script = ExtResource("10_q21o6")
 
 [node name="Collision_Shape_Especial" type="CollisionShape2D" parent="boss/Area2D/HitBox_Especial"]
-position = Vector2(-63, 61)
+position = Vector2(-71, 75)
 rotation = 0.84823
 shape = SubResource("CapsuleShape2D_db30t")
 disabled = true

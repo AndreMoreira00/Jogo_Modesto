@@ -15,7 +15,7 @@ func _ready() -> void:
 	$AnimatedSprite2D2.connect("animation_finished", Callable(self, "_on_special_animation_finished"))
 	
 	add_child(attack_timer)
-	attack_timer.wait_time = 2.0
+	attack_timer.wait_time = 1.5
 	attack_timer.one_shot = true  
 	
 	add_child(entred_timer)
@@ -27,9 +27,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player:
 		if player.global_position.x - 150 <= global_position.x:
-			$AnimatedSprite2D.scale.x = 1.15
+			$AnimatedSprite2D.scale.x = 1
 		elif player.global_position.x - 150 >= global_position.x:
-			$AnimatedSprite2D.scale.x = -1.15
+			$AnimatedSprite2D.scale.x = -1
 			
 	if is_attacking and $AnimatedSprite2D.animation != "morrer":
 		is_attacking = false
@@ -86,7 +86,7 @@ func _on_animation_finished():
 
 func _on_special_frame_changed():
 	if $AnimatedSprite2D2.animation == "ataque_especial":
-		if $AnimatedSprite2D2.frame == 4: 
+		if $AnimatedSprite2D2.frame == 2: 
 			$HitBox_Especial/Collision_Shape_Especial.disabled = false
 		else:
 			$HitBox_Especial/Collision_Shape_Especial.disabled = true

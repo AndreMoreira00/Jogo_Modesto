@@ -28,7 +28,7 @@ func patrol(delta: float) -> void:
 	if (move_direction == -1 and distance_traveled >= LEFT_DISTANCE) or (move_direction == 1 and distance_traveled >= RIGHT_DISTANCE):
 		move_direction *= -1  
 		distance_traveled = 0  
-		$Area2D/AnimatedSprite2D.scale.x = move_direction * -1.75
+		$Area2D/AnimatedSprite2D.scale.x = move_direction * -1
 
 func dano(DANO):
 	vida-=DANO

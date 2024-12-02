@@ -12,11 +12,11 @@ func _ready() -> void:
 	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_finished"))
 	
 	add_child(attack_timer)
-	attack_timer.wait_time = 2
+	attack_timer.wait_time = 1.5
 	attack_timer.one_shot = true  
 
 	add_child(entred_timer)
-	entred_timer.wait_time = 0.25
+	entred_timer.wait_time = 0.5
 	entred_timer.one_shot = true 
 
 func _process(delta: float) -> void:

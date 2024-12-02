@@ -1,0 +1,85 @@
+[gd_scene load_steps=17 format=3 uid="uid://bc5sddpk0ku50"]
+
+[ext_resource type="Texture2D" uid="uid://ddjp3nf4wcsbn" path="res://Sprites/HUD/MORTE/textura de fundo.png" id="1_y8iii"]
+[ext_resource type="Script" path="res://Scripts/fases/button.gd" id="2_l1jg6"]
+[ext_resource type="Texture2D" uid="uid://pwamsbt0m1hs" path="res://Sprites/HUD/MORTE/morreu.png" id="3_7jbtp"]
+[ext_resource type="Texture2D" uid="uid://cvocm5pb3jaee" path="res://Sprites/HUD/MORTE/Menu.png" id="4_5cgrf"]
+[ext_resource type="Texture2D" uid="uid://bd4v2xm3f1u7g" path="res://Sprites/HUD/MORTE/botão again normal.png" id="5_h213q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5sot"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbxqj"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aya8k"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_777kj"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12elg"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3e1i"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x20x3"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vj3qv"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3aip6"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bnno7"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qvpm"]
+modulate_color = Color(1, 1, 1, 0)
+
+[node name="TelaMorte" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+texture = ExtResource("1_y8iii")
+centered = false
+
+[node name="Button" type="Button" parent="fundo"]
+offset_left = 546.0
+offset_top = 349.0
+offset_right = 845.0
+offset_bottom = 474.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_j5sot")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_lbxqj")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_aya8k")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_777kj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_12elg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_v3e1i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x20x3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_vj3qv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3aip6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_bnno7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8qvpm")
+action_mode = 0
+script = ExtResource("2_l1jg6")
+
+[node name="textos" type="Sprite2D" parent="."]
+position = Vector2(376, -7.99998)
+scale = Vector2(5, 5)
+texture = ExtResource("3_7jbtp")
+centered = false
+
+[node name="textos2" type="Sprite2D" parent="."]
+position = Vector2(376, -176)
+scale = Vector2(10, 10)
+texture = ExtResource("4_5cgrf")
+centered = false
+
+[node name="textos3" type="Sprite2D" parent="."]
+position = Vector2(376, -176)
+scale = Vector2(10, 10)
+texture = ExtResource("5_h213q")
+centered = false
+
+[connection signal="pressed" from="fundo/Button" to="fundo/Button" method="_on_pressed"]

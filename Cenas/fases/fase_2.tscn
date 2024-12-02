@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c8b0yg0j5qp7p"]
+[gd_scene load_steps=33 format=3 uid="uid://c8b0yg0j5qp7p"]
 
 [ext_resource type="Texture2D" uid="uid://cyu2vn8xa7gth" path="res://Sprites/fase 2/background 1/camada inferior.png" id="1_rwrjk"]
 [ext_resource type="Texture2D" uid="uid://o1kea6k71gue" path="res://Sprites/fase 2/background 2/camada inferior.png" id="2_7lkd5"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://dmpbk0qs1wwe0" path="res://Cenas/inimigos/fase2/cobra_fase_2.tscn" id="25_owb7e"]
 [ext_resource type="PackedScene" uid="uid://cj4c053ermgux" path="res://Cenas/inimigos/fase1/inimigo_arqueiro.tscn" id="26_kdks0"]
 [ext_resource type="PackedScene" uid="uid://8ahga7ag21xq" path="res://Cenas/player/pocao.tscn" id="28_4raod"]
+[ext_resource type="PackedScene" uid="uid://d4cyfafkbp7a6" path="res://Cenas/inimigos/fase2/boss_fase_2.tscn" id="29_epr2s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5opwl"]
 animations = [{
@@ -269,7 +270,7 @@ position = Vector2(9313, 321)
 shape = SubResource("RectangleShape2D_xith1")
 
 [node name="Player" parent="." instance=ExtResource("3_jvcxo")]
-position = Vector2(73.0001, 506)
+position = Vector2(108, 496)
 scale = Vector2(2.5, 2.5)
 
 [node name="inimigos" type="Node2D" parent="."]
@@ -291,7 +292,7 @@ position = Vector2(2025, 452)
 scale = Vector2(1.6, 1.6)
 
 [node name="inimigo_arqueiro2" parent="inimigos" instance=ExtResource("26_kdks0")]
-position = Vector2(4426, 451)
+position = Vector2(4491, 446)
 scale = Vector2(1.6, 1.6)
 
 [node name="pocoes" type="Node2D" parent="."]
@@ -302,6 +303,10 @@ scale = Vector2(1.5, 1.5)
 
 [node name="pocao2" parent="pocoes" instance=ExtResource("28_4raod")]
 position = Vector2(3116, 571)
+scale = Vector2(2, 2)
+
+[node name="boss_fase2" parent="." instance=ExtResource("29_epr2s")]
+position = Vector2(7978, 403)
 scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="Passagem" to="Passagem" method="_on_body_entered"]
