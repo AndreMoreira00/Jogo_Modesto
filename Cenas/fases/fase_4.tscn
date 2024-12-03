@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmgk5yhy6h3ev"]
+[gd_scene load_steps=21 format=3 uid="uid://cmgk5yhy6h3ev"]
 
 [ext_resource type="Texture2D" uid="uid://ccpdfbldy5klj" path="res://Sprites/Boss Final/parte 1/fundo.png" id="1_p71a6"]
 [ext_resource type="Texture2D" uid="uid://h23qy5ryfnkn" path="res://Sprites/Boss Final/parte 2/camada 0.png" id="2_aa0vu"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cchwp1m6yunc5" path="res://Cenas/inimigos/fase 4/boss_fase_4.tscn" id="12_8pdka"]
 [ext_resource type="Texture2D" uid="uid://d24wj0mack6pc" path="res://Sprites/Boss Final/tileset.png" id="12_rl6mx"]
 [ext_resource type="Script" path="res://Cenas/fases/passagem4-5.gd" id="14_igivt"]
+[ext_resource type="AudioStream" uid="uid://ba2kmkva68uri" path="res://Sounds/Musica4_final-Trim.mp3" id="15_nkmuq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7gfar"]
 texture = ExtResource("12_rl6mx")
@@ -485,5 +486,10 @@ metadata/_edit_group_ = true
 [node name="Passagem" type="CollisionShape2D" parent="Passagem"]
 position = Vector2(5098, 453)
 shape = SubResource("RectangleShape2D_ggje3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_nkmuq")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Passagem" to="Passagem" method="_on_body_entered"]
