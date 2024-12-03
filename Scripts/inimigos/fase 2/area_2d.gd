@@ -54,7 +54,10 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.play("andar")
 			$HitBox_Especial/Collision_Shape_Especial.disabled = true
 			$HitBox/HitBox.disabled = true
-			
+		elif $AnimatedSprite2D.animation == "dano" and $AnimatedSprite2D.frame == 3:
+			$AnimatedSprite2D.play("andar")
+			$HitBox_Especial/Collision_Shape_Especial.disabled = true
+			$HitBox/HitBox.disabled = true
 func _on_body_entered(body: Node2D) -> void:
 	exit = false
 	entred_timer.start()

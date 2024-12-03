@@ -1353,7 +1353,7 @@ sources/0 = SubResource("TileSetAtlasSource_j7fcg")
 
 [node name="Player" parent="." instance=ExtResource("1_vxj0m")]
 z_index = 1
-position = Vector2(93.0001, 644)
+position = Vector2(7470, 629)
 scale = Vector2(2.5, 2.5)
 
 [node name="Inimigos" type="Node2D" parent="."]

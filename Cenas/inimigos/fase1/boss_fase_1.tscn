@@ -253,10 +253,19 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jvmbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvmbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvmbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvmbt")
 }],
 "loop": false,
 "name": &"dano",
-"speed": 15.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,

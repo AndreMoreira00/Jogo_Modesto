@@ -9,11 +9,13 @@ var distance_traveled = 0.0
 
 var vida = 8.0
 var is_dead = false
+var dano_tomado = false
 
 func _ready():
 	$Area2D/AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_finished"))
 
 func _process(delta: float) -> void:
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
@@ -37,6 +39,7 @@ func dano(DANO):
 		$Area2D/AnimatedSprite2D.play("morrer")
 		SPEED = 0
 	else:
+		dano_tomado = true
 		$Area2D/AnimatedSprite2D.play("dano")
 
 func _on_animation_finished():

@@ -229,7 +229,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"dano",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -335,10 +335,8 @@ script = ExtResource("2_7buh2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="boss/Area2D"]
 position = Vector2(-14, 43)
 sprite_frames = SubResource("SpriteFrames_ysaj5")
-animation = &"atacar"
+animation = &"dano"
 autoplay = "andar"
-frame = 6
-frame_progress = 1.0
 flip_h = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="boss/Area2D"]
