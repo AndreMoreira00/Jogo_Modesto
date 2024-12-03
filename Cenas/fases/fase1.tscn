@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://q4pv7i3j77bw"]
+[gd_scene load_steps=34 format=3 uid="uid://q4pv7i3j77bw"]
 
 [ext_resource type="PackedScene" uid="uid://8ahga7ag21xq" path="res://Cenas/player/pocao.tscn" id="1_tqrnt"]
 [ext_resource type="PackedScene" uid="uid://b5kpscjyxopid" path="res://Cenas/player/player.tscn" id="1_vxj0m"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://o8ied4l7xo3q" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Passagem fase para fase 2 - camada superior.png" id="20_cqw52"]
 [ext_resource type="Texture2D" uid="uid://c8psk0fucg7vr" path="res://Sprites/TRANSIÇÕES DE FASES/FASES 1 - 2/FASE 1/Caverna Sobreposição.png" id="20_wdbx6"]
 [ext_resource type="Script" path="res://Cenas/fases/passagem1-2.gd" id="24_8gggb"]
+[ext_resource type="AudioStream" uid="uid://d0tmy5uuk8xu5" path="res://Sounds/Musica1-Trim.mp3" id="29_hdfgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6eg0"]
 size = Vector2(9721.75, 74)
@@ -1672,5 +1673,10 @@ scale = Vector2(-2.02843, 2.02936)
 texture = ExtResource("20_cqw52")
 centered = false
 flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_hdfgv")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Colisoes/Passagem" to="Colisoes/Passagem" method="_on_body_entered"]
